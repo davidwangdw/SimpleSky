@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21B33D041E1F525E001CE500"
-               BuildableName = "SimpleSky.app"
-               BlueprintName = "SimpleSky"
-               ReferencedContainer = "container:SimpleSky.xcodeproj">
+               BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+               BuildableName = "onboardingWithUIPageViewController.app"
+               BlueprintName = "onboardingWithUIPageViewController"
+               ReferencedContainer = "container:onboardingWithUIPageViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC5C4D791B7AB58200D3E6BC"
+               BuildableName = "onboardingWithUIPageViewControllerTests.xctest"
+               BlueprintName = "onboardingWithUIPageViewControllerTests"
+               ReferencedContainer = "container:onboardingWithUIPageViewController.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21B33D041E1F525E001CE500"
-            BuildableName = "SimpleSky.app"
-            BlueprintName = "SimpleSky"
-            ReferencedContainer = "container:SimpleSky.xcodeproj">
+            BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+            BuildableName = "onboardingWithUIPageViewController.app"
+            BlueprintName = "onboardingWithUIPageViewController"
+            ReferencedContainer = "container:onboardingWithUIPageViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21B33D041E1F525E001CE500"
-            BuildableName = "SimpleSky.app"
-            BlueprintName = "SimpleSky"
-            ReferencedContainer = "container:SimpleSky.xcodeproj">
+            BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+            BuildableName = "onboardingWithUIPageViewController.app"
+            BlueprintName = "onboardingWithUIPageViewController"
+            ReferencedContainer = "container:onboardingWithUIPageViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21B33D041E1F525E001CE500"
-            BuildableName = "SimpleSky.app"
-            BlueprintName = "SimpleSky"
-            ReferencedContainer = "container:SimpleSky.xcodeproj">
+            BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+            BuildableName = "onboardingWithUIPageViewController.app"
+            BlueprintName = "onboardingWithUIPageViewController"
+            ReferencedContainer = "container:onboardingWithUIPageViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
