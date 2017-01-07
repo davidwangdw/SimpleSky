@@ -71,6 +71,13 @@
             ReferencedContainer = "container:SimpleSky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "DARKSKY_API"
+            value = "20817446bb2f0c41a7cbe0fcdb3aea20"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
