@@ -6,12 +6,18 @@ var weatherData = Weather(weatherData: "")
 
 class CurrentViewController : UIViewController, WeatherGetterDelegate {
     
-    
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var logoView: UIImageView!
+    @IBOutlet weak var degreeLabel: UILabel!
+    @IBOutlet weak var highTempLabel: UILabel!
+    @IBOutlet weak var lowTempLabel: UILabel!
 
     
+    @IBAction func updateWeather(_ sender: Any) {
+        updateLabels()
+    }
     override func viewDidLoad() {
-        
-        //let controller = segue.destinationViewController as! SecondViewController
+
         
         var weather: WeatherGetter!
         
@@ -19,6 +25,14 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
         
         weather.getWeather(coordinates: "40.781693,-73.966590")
         
+        degreeLabel.text = "56°"
+        
+    }
+    
+    func updateLabels() {
+        //"°"
+        degreeLabel.text = "20°"
+        summaryLabel.text = weatherData.summary
     }
     
     func didGetWeather(weather: Weather) {
@@ -26,7 +40,7 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
             print(weather.summary)
         }
         
-        weatherData.city = weather.city
+        weatherData = weather
     }
     func didNotGetWeather(error: NSError) {
         // This method is called asynchronously, which means it won't execute in the main queue.

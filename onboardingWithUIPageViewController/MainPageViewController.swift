@@ -10,20 +10,28 @@ import UIKit
 
 class MainPageViewController : UIPageViewController {
     
+    var imageView: UIImageView!
+    
     override func viewDidLoad() {
         // Set the dataSource and delegate in code.  
         // I can't figure out how to do this in the Storyboard!
         dataSource = self
         delegate = self
         // this sets the background color of the built-in paging dots
-        view.backgroundColor = UIColor.darkGray
+        //view.backgroundColor = UIColor.darkGray
         
-        // This is the starting point.  Start with step zero.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background_black")!)
+
+        
         setViewControllers([getCurrentViewController()], direction: .forward, animated: false, completion: nil)
     }
     
     func getCurrentViewController() -> CurrentViewController {
         return storyboard!.instantiateViewController(withIdentifier: "CurrentViewController") as! CurrentViewController
+    }
+    
+    func getDailyDetailViewController() -> DailyDetailViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "DailyDetailViewController") as! DailyDetailViewController
     }
     
     func getDailyViewController() -> DailyViewController {
@@ -40,13 +48,19 @@ class MainPageViewController : UIPageViewController {
 extension MainPageViewController : UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+
         if viewController.isKind(of: WeeklyViewController.self) {
             // 2 -> 1
             return getDailyViewController()
         } else if viewController.isKind(of: DailyViewController.self) {
             // 1 -> 0
+            return getDailyDetailViewController()
+        } else if viewController.isKind(of: DailyDetailViewController.self) {
+            
             return getCurrentViewController()
-        } else {
+        }
+        
+        else {
             // 0 -> end of the road
             return nil
         }
@@ -55,6 +69,8 @@ extension MainPageViewController : UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if viewController.isKind(of: CurrentViewController.self) {
             // 0 -> 1
+            return getDailyDetailViewController()
+        } else if viewController.isKind(of: DailyDetailViewController.self) {
             return getDailyViewController()
         } else if viewController.isKind(of: DailyViewController.self) {
             // 1 -> 2
@@ -67,7 +83,7 @@ extension MainPageViewController : UIPageViewControllerDataSource {
     
     // Enables pagination dots
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 3
+        return 4
     }
     
     // This only gets called once, when setViewControllers is called

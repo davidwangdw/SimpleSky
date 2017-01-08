@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		217DC4E41E21509C0049CE73 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DC4E21E21509C0049CE73 /* Weather.swift */; };
 		217DC4E51E21509C0049CE73 /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DC4E31E21509C0049CE73 /* WeatherGetter.swift */; };
+		21C0A0251E21B1CC006DAFE1 /* DailyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0A0241E21B1CC006DAFE1 /* DailyDetailViewController.swift */; };
 		FC5C4D6B1B7AB58100D3E6BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D6A1B7AB58100D3E6BC /* AppDelegate.swift */; };
 		FC5C4D701B7AB58100D3E6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5C4D6E1B7AB58100D3E6BC /* Main.storyboard */; };
 		FC5C4D721B7AB58100D3E6BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5C4D711B7AB58100D3E6BC /* Images.xcassets */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		217DC4E21E21509C0049CE73 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = SOURCE_ROOT; };
 		217DC4E31E21509C0049CE73 /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = SOURCE_ROOT; };
+		21C0A0241E21B1CC006DAFE1 /* DailyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDetailViewController.swift; sourceTree = "<group>"; };
 		FC5C4D651B7AB58100D3E6BC /* SimpleSky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5C4D691B7AB58100D3E6BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC5C4D6A1B7AB58100D3E6BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				FC5C4D6A1B7AB58100D3E6BC /* AppDelegate.swift */,
 				FC5C4D6E1B7AB58100D3E6BC /* Main.storyboard */,
+				21C0A0241E21B1CC006DAFE1 /* DailyDetailViewController.swift */,
 				217DC4E21E21509C0049CE73 /* Weather.swift */,
 				217DC4E31E21509C0049CE73 /* WeatherGetter.swift */,
 				FC5C4D711B7AB58100D3E6BC /* Images.xcassets */,
@@ -243,6 +246,7 @@
 				FC5C4D8F1B7ABA9700D3E6BC /* WeeklyViewController.swift in Sources */,
 				FC5C4D8D1B7ABA8D00D3E6BC /* DailyViewController.swift in Sources */,
 				217DC4E41E21509C0049CE73 /* Weather.swift in Sources */,
+				21C0A0251E21B1CC006DAFE1 /* DailyDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

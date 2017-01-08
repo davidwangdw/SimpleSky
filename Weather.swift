@@ -14,285 +14,311 @@ struct Weather {
     
     //current weather data
     var summary: String
-    //let timezone: String
+    var timezone: String
     
     var city: String
-    /*let country: String
-    
-    let currentDateAndtime: NSDate
+    var country: String
+    //var currentDateAndtime: NSDate
+    var currentDateAndtime: Intt
     
     //weather icon
-    let icon: String
+    var icon: String
     
-    let precipIntensity: Double
-    let precipProbability: Double
-    let precipType: String
+    var precipIntensity: Double
+    var precipProbability: Double
+    var precipType: String
     
-    let temperature: Double
-    let apparentTemperature: Double
+    var temperature: Double
+    var apparentTemperature: Double
     
-    let humidity: Double
-    
-    let windSpeed: Double
-    
+    var humidity: Double
+    var windSpeed: Double
     
     //hourly
-    let dailySummary: String
+    var dailySummary: String
     
     //do I actually need separate variables for all this stuff?
     //try this out then see if we can consolidate this
-    let hourlyTime1: NSDate
-    let hourlyTime2: NSDate
-    let hourlyTime3: NSDate
-    let hourlyTime4: NSDate
-    let hourlyTime5: NSDate
-    let hourlyTime6: NSDate
-    let hourlyTime7: NSDate
-    let hourlyTime8: NSDate
-    let hourlyTime9: NSDate
-    let hourlyTime10: NSDate
-    let hourlyTime11: NSDate
-    let hourlyTime12: NSDate
-    let hourlyTime13: NSDate
-    let hourlyTime14: NSDate
-    let hourlyTime15: NSDate
-    let hourlyTime16: NSDate
-    let hourlyTime17: NSDate
-    let hourlyTime18: NSDate
-    let hourlyTime19: NSDate
-    let hourlyTime20: NSDate
-    let hourlyTime21: NSDate
-    let hourlyTime22: NSDate
-    let hourlyTime23: NSDate
-    let hourlyTime24: NSDate
+    /*var hourlyTime1: NSDate
+    var hourlyTime2: NSDate
+    var hourlyTime3: NSDate
+    var hourlyTime4: NSDate
+    var hourlyTime5: NSDate
+    var hourlyTime6: NSDate
+    var hourlyTime7: NSDate
+    var hourlyTime8: NSDate
+    var hourlyTime9: NSDate
+    var hourlyTime10: NSDate
+    var hourlyTime11: NSDate
+    var hourlyTime12: NSDate
+    var hourlyTime13: NSDate
+    var hourlyTime14: NSDate
+    var hourlyTime15: NSDate
+    var hourlyTime16: NSDate
+    var hourlyTime17: NSDate
+    var hourlyTime18: NSDate
+    var hourlyTime19: NSDate
+    var hourlyTime20: NSDate
+    var hourlyTime21: NSDate
+    var hourlyTime22: NSDate
+    var hourlyTime23: NSDate
+    var hourlyTime24: NSDate
     
-    let hourlySummary1: String
-    let hourlySummary2: String
-    let hourlySummary3: String
-    let hourlySummary4: String
-    let hourlySummary5: String
-    let hourlySummary6: String
-    let hourlySummary7: String
-    let hourlySummary8: String
-    let hourlySummary9: String
-    let hourlySummary10: String
-    let hourlySummary11: String
-    let hourlySummary12: String
-    let hourlySummary13: String
-    let hourlySummary14: String
-    let hourlySummary15: String
-    let hourlySummary16: String
-    let hourlySummary17: String
-    let hourlySummary18: String
-    let hourlySummary19: String
-    let hourlySummary20: String
-    let hourlySummary21: String
-    let hourlySummary22: String
-    let hourlySummary23: String
-    let hourlySummary24: String
+    var hourlySummary1: String
+    var hourlySummary2: String
+    var hourlySummary3: String
+    var hourlySummary4: String
+    var hourlySummary5: String
+    var hourlySummary6: String
+    var hourlySummary7: String
+    var hourlySummary8: String
+    var hourlySummary9: String
+    var hourlySummary10: String
+    var hourlySummary11: String
+    var hourlySummary12: String
+    var hourlySummary13: String
+    var hourlySummary14: String
+    var hourlySummary15: String
+    var hourlySummary16: String
+    var hourlySummary17: String
+    var hourlySummary18: String
+    var hourlySummary19: String
+    var hourlySummary20: String
+    var hourlySummary21: String
+    var hourlySummary22: String
+    var hourlySummary23: String
+    var hourlySummary24: String
     
-    let hourlyIcon1: String
-    let hourlyIcon2: String
-    let hourlyIcon3: String
-    let hourlyIcon4: String
-    let hourlyIcon5: String
-    let hourlyIcon6: String
-    let hourlyIcon7: String
-    let hourlyIcon8: String
-    let hourlyIcon9: String
-    let hourlyIcon10: String
-    let hourlyIcon11: String
-    let hourlyIcon12: String
-    let hourlyIcon13: String
-    let hourlyIcon14: String
-    let hourlyIcon15: String
-    let hourlyIcon16: String
-    let hourlyIcon17: String
-    let hourlyIcon18: String
-    let hourlyIcon19: String
-    let hourlyIcon20: String
-    let hourlyIcon21: String
-    let hourlyIcon22: String
-    let hourlyIcon23: String
-    let hourlyIcon24: String
+    var hourlyIcon1: String
+    var hourlyIcon2: String
+    var hourlyIcon3: String
+    var hourlyIcon4: String
+    var hourlyIcon5: String
+    var hourlyIcon6: String
+    var hourlyIcon7: String
+    var hourlyIcon8: String
+    var hourlyIcon9: String
+    var hourlyIcon10: String
+    var hourlyIcon11: String
+    var hourlyIcon12: String
+    var hourlyIcon13: String
+    var hourlyIcon14: String
+    var hourlyIcon15: String
+    var hourlyIcon16: String
+    var hourlyIcon17: String
+    var hourlyIcon18: String
+    var hourlyIcon19: String
+    var hourlyIcon20: String
+    var hourlyIcon21: String
+    var hourlyIcon22: String
+    var hourlyIcon23: String
+    var hourlyIcon24: String
     
-    let hourlyPrecipProbability1: Double
-    let hourlyPrecipProbability2: Double
-    let hourlyPrecipProbability3: Double
-    let hourlyPrecipProbability4: Double
-    let hourlyPrecipProbability5: Double
-    let hourlyPrecipProbability6: Double
-    let hourlyPrecipProbability7: Double
-    let hourlyPrecipProbability8: Double
-    let hourlyPrecipProbability9: Double
-    let hourlyPrecipProbability10: Double
-    let hourlyPrecipProbability11: Double
-    let hourlyPrecipProbability12: Double
-    let hourlyPrecipProbability13: Double
-    let hourlyPrecipProbability14: Double
-    let hourlyPrecipProbability15: Double
-    let hourlyPrecipProbability16: Double
-    let hourlyPrecipProbability17: Double
-    let hourlyPrecipProbability18: Double
-    let hourlyPrecipProbability19: Double
-    let hourlyPrecipProbability20: Double
-    let hourlyPrecipProbability21: Double
-    let hourlyPrecipProbability22: Double
-    let hourlyPrecipProbability23: Double
-    let hourlyPrecipProbability24: Double
+    var hourlyPrecipProbability1: Double
+    var hourlyPrecipProbability2: Double
+    var hourlyPrecipProbability3: Double
+    var hourlyPrecipProbability4: Double
+    var hourlyPrecipProbability5: Double
+    var hourlyPrecipProbability6: Double
+    var hourlyPrecipProbability7: Double
+    var hourlyPrecipProbability8: Double
+    var hourlyPrecipProbability9: Double
+    var hourlyPrecipProbability10: Double
+    var hourlyPrecipProbability11: Double
+    var hourlyPrecipProbability12: Double
+    var hourlyPrecipProbability13: Double
+    var hourlyPrecipProbability14: Double
+    var hourlyPrecipProbability15: Double
+    var hourlyPrecipProbability16: Double
+    var hourlyPrecipProbability17: Double
+    var hourlyPrecipProbability18: Double
+    var hourlyPrecipProbability19: Double
+    var hourlyPrecipProbability20: Double
+    var hourlyPrecipProbability21: Double
+    var hourlyPrecipProbability22: Double
+    var hourlyPrecipProbability23: Double
+    var hourlyPrecipProbability24: Double
     
-    let hourlyTemperature1: Double
-    let hourlyTemperature2: Double
-    let hourlyTemperature3: Double
-    let hourlyTemperature4: Double
-    let hourlyTemperature5: Double
-    let hourlyTemperature6: Double
-    let hourlyTemperature7: Double
-    let hourlyTemperature8: Double
-    let hourlyTemperature9: Double
-    let hourlyTemperature10: Double
-    let hourlyTemperature11: Double
-    let hourlyTemperature12: Double
-    let hourlyTemperature13: Double
-    let hourlyTemperature14: Double
-    let hourlyTemperature15: Double
-    let hourlyTemperature16: Double
-    let hourlyTemperature17: Double
-    let hourlyTemperature18: Double
-    let hourlyTemperature19: Double
-    let hourlyTemperature20: Double
-    let hourlyTemperature21: Double
-    let hourlyTemperature22: Double
-    let hourlyTemperature23: Double
-    let hourlyTemperature24: Double
+    var hourlyTemperature1: Double
+    var hourlyTemperature2: Double
+    var hourlyTemperature3: Double
+    var hourlyTemperature4: Double
+    var hourlyTemperature5: Double
+    var hourlyTemperature6: Double
+    var hourlyTemperature7: Double
+    var hourlyTemperature8: Double
+    var hourlyTemperature9: Double
+    var hourlyTemperature10: Double
+    var hourlyTemperature11: Double
+    var hourlyTemperature12: Double
+    var hourlyTemperature13: Double
+    var hourlyTemperature14: Double
+    var hourlyTemperature15: Double
+    var hourlyTemperature16: Double
+    var hourlyTemperature17: Double
+    var hourlyTemperature18: Double
+    var hourlyTemperature19: Double
+    var hourlyTemperature20: Double
+    var hourlyTemperature21: Double
+    var hourlyTemperature22: Double
+    var hourlyTemperature23: Double
+    var hourlyTemperature24: Double
     
-    let hourlyApparentTemperature1: Double
-    let hourlyApparentTemperature2: Double
-    let hourlyApparentTemperature3: Double
-    let hourlyApparentTemperature4: Double
-    let hourlyApparentTemperature5: Double
-    let hourlyApparentTemperature6: Double
-    let hourlyApparentTemperature7: Double
-    let hourlyApparentTemperature8: Double
-    let hourlyApparentTemperature9: Double
-    let hourlyApparentTemperature10: Double
-    let hourlyApparentTemperature11: Double
-    let hourlyApparentTemperature12: Double
-    let hourlyApparentTemperature13: Double
-    let hourlyApparentTemperature14: Double
-    let hourlyApparentTemperature15: Double
-    let hourlyApparentTemperature16: Double
-    let hourlyApparentTemperature17: Double
-    let hourlyApparentTemperature18: Double
-    let hourlyApparentTemperature19: Double
-    let hourlyApparentTemperature20: Double
-    let hourlyApparentTemperature21: Double
-    let hourlyApparentTemperature22: Double
-    let hourlyApparentTemperature23: Double
-    let hourlyApparentTemperature24: Double
+    var hourlyApparentTemperature1: Double
+    var hourlyApparentTemperature2: Double
+    var hourlyApparentTemperature3: Double
+    var hourlyApparentTemperature4: Double
+    var hourlyApparentTemperature5: Double
+    var hourlyApparentTemperature6: Double
+    var hourlyApparentTemperature7: Double
+    var hourlyApparentTemperature8: Double
+    var hourlyApparentTemperature9: Double
+    var hourlyApparentTemperature10: Double
+    var hourlyApparentTemperature11: Double
+    var hourlyApparentTemperature12: Double
+    var hourlyApparentTemperature13: Double
+    var hourlyApparentTemperature14: Double
+    var hourlyApparentTemperature15: Double
+    var hourlyApparentTemperature16: Double
+    var hourlyApparentTemperature17: Double
+    var hourlyApparentTemperature18: Double
+    var hourlyApparentTemperature19: Double
+    var hourlyApparentTemperature20: Double
+    var hourlyApparentTemperature21: Double
+    var hourlyApparentTemperature22: Double
+    var hourlyApparentTemperature23: Double
+    var hourlyApparentTemperature24: Double
     
     //daily info
     
-    let dailyTime1: NSDate
-    let dailyTime2: NSDate
-    let dailyTime3: NSDate
-    let dailyTime4: NSDate
-    let dailyTime5: NSDate
-    let dailyTime6: NSDate
-    let dailyTime7: NSDate
-    let dailyTime8: NSDate
-    let dailyTime9: NSDate
-    let dailyTime10: NSDate
+    var dailyTime1: NSDate
+    var dailyTime2: NSDate
+    var dailyTime3: NSDate
+    var dailyTime4: NSDate
+    var dailyTime5: NSDate
+    var dailyTime6: NSDate
+    var dailyTime7: NSDate
+    var dailyTime8: NSDate
+    var dailyTime9: NSDate
+    var dailyTime10: NSDate
     
-    let dailySummary1: String
-    let dailySummary2: String
-    let dailySummary3: String
-    let dailySummary4: String
-    let dailySummary5: String
-    let dailySummary6: String
-    let dailySummary7: String
-    let dailySummary8: String
-    let dailySummary9: String
-    let dailySummary10: String
+    var dailySummary1: String
+    var dailySummary2: String
+    var dailySummary3: String
+    var dailySummary4: String
+    var dailySummary5: String
+    var dailySummary6: String
+    var dailySummary7: String
+    var dailySummary8: String
+    var dailySummary9: String
+    var dailySummary10: String
     
-    let dailyIcon1: String
-    let dailyIcon2: String
-    let dailyIcon3: String
-    let dailyIcon4: String
-    let dailyIcon5: String
-    let dailyIcon6: String
-    let dailyIcon7: String
-    let dailyIcon8: String
-    let dailyIcon9: String
-    let dailyIcon10: String
+    var dailyIcon1: String
+    var dailyIcon2: String
+    var dailyIcon3: String
+    var dailyIcon4: String
+    var dailyIcon5: String
+    var dailyIcon6: String
+    var dailyIcon7: String
+    var dailyIcon8: String
+    var dailyIcon9: String
+    var dailyIcon10: String
     
-    let dailyPrecipProbability1: Double
-    let dailyPrecipProbability2: Double
-    let dailyPrecipProbability3: Double
-    let dailyPrecipProbability4: Double
-    let dailyPrecipProbability5: Double
-    let dailyPrecipProbability6: Double
-    let dailyPrecipProbability7: Double
-    let dailyPrecipProbability8: Double
-    let dailyPrecipProbability9: Double
-    let dailyPrecipProbability10: Double*/
-    
-    
-
-    
+    var dailyPrecipProbability1: Double
+    var dailyPrecipProbability2: Double
+    var dailyPrecipProbability3: Double
+    var dailyPrecipProbability4: Double
+    var dailyPrecipProbability5: Double
+    var dailyPrecipProbability6: Double
+    var dailyPrecipProbability7: Double
+    var dailyPrecipProbability8: Double
+    var dailyPrecipProbability9: Double
+    var dailyPrecipProbability10: Double*/
     
     
 
     
     
-    /*let longitude: Double
-    let latitude: Double
-    //let timezone: String
     
-    let dateAndTime: NSDate
+
+    
+    
+    /*var longitude: Double
+    var latitude: Double
+    //var timezone: String
+    
+    var dateAndTime: NSDate
     
     //this is specific weather data
     
-    let icon: String
-    let precipProbability: Double
-    let precipType: String
-    let temperature: Double
-    let apparentTemperature: Double
-    let humidity: Double
-    let windSpeed: Double
-    let windBearing: Double*/
+    var icon: String
+    var precipProbability: Double
+    var precipType: String
+    var temperature: Double
+    var apparentTemperature: Double
+    var humidity: Double
+    var windSpeed: Double
+    var windBearing: Double*/
     
     
     //specific daily data
-    /*let sunriseTime:NSDate
-    let sunsetTime: NSDate
-    let temperatureMin: Double
-    let temperatureMinTime: NSDate
-    let temperatureMax: Double
-    let temperatureMaxTime: NSDate
-    let apparentTemperatureMin: Double
-    let apparentTemperatureMinTime: NSDate
-    let apparentTemperatureMax: Double
-    let apparentTemperatureMaxTime: NSDate*/
+    /*var sunriseTime:NSDate
+    var sunsetTime: NSDate
+    var temperatureMin: Double
+    var temperatureMinTime: NSDate
+    var temperatureMax: Double
+    var temperatureMaxTime: NSDate
+    var apparentTemperatureMin: Double
+    var apparentTemperatureMinTime: NSDate
+    var apparentTemperatureMax: Double
+    var apparentTemperatureMaxTime: NSDate*/
     
-    /*let alertTitle: String
-    let alertTime: NSDate
-    let alertExpire: NSDate
-    let alertDescription: String*/
+    /*var alertTitle: String
+    var alertTime: NSDate
+    var alertExpire: NSDate
+    var alertDescription: String*/
 
     
     init(weatherData: [String: AnyObject]) {
         
-        print("got into initialization")
+        
+        //overall table is weatherData["key"]
+        
+        timezone = weatherData["timezone"] as! String
+        
+        //separate timezone into city and country later
+        
+        city = "city"
+        country = "country"
+        
+        //current data
         
         let weatherDictCurrently = weatherData["currently"]
         
         summary = weatherDictCurrently?["summary"] as! String
         
-        city = weatherData["timezone"] as! String
+        currentDateAndtime = weatherDictCurrently?["time"] as! Int
         
-        //separate timezone into city and country
+        icon = weatherDictCurrently?["icon"] as! String
         
+        precipIntensity = weatherDictCurrently?["precipIntensity"] as! Double
+        
+        precipProbability = weatherDictCurrently?["precipProbability"] as! Double
+
+        precipType = weatherDictCurrently?["precipType"] as! String
+        
+        temperature = weatherDictCurrently?["temperature"] as! Double
+        
+        apparentTemperature = weatherDictCurrently?["apparentTemperature"] as! Double
+        
+        humidity = weatherDictCurrently?["humidity"] as! Double
+        
+        windSpeed = weatherDictCurrently?["windSpeed"] as! Double
+        
+        //daily summary
+        
+        let weatherDictDailyDetail = weatherData["daily"]
+        dailySummary = weatherDictDailyDetail?["summary"] as! String
         
         /*
         
@@ -313,7 +339,7 @@ struct Weather {
         windSpeed = weatherDictCurrently["summary"] as! Double
         windBearing = weatherDictCurrently["summary"] as! Double*/
         
-        /*let weatherDictMinutely = weatherData["minutely"]![0] as! [String: AnyObject]
+        /*var weatherDictMinutely = weatherData["minutely"]![0] as! [String: AnyObject]
         
         dateAndTime = NSDate(timeIntervalSince1970: weatherDictMinutely["time"] as! TimeInterval)
         
@@ -327,7 +353,7 @@ struct Weather {
         windSpeed = weatherDictMinutely["summary"] as! Double
         windBearing = weatherDictMinutely["summary"] as! Double
         
-        let weatherDictHourly = weatherData["hourly"]![0] as! [String: AnyObject]
+        var weatherDictHourly = weatherData["hourly"]![0] as! [String: AnyObject]
         
         dateAndTime = NSDate(timeIntervalSince1970: weatherDictHourly["time"] as! TimeInterval)
 
@@ -341,7 +367,7 @@ struct Weather {
         windSpeed = weatherDictHourly["summary"] as! Double
         windBearing = weatherDictHourly["summary"] as! Double
         
-        let weatherDictDaily = weatherData["daily"]![0] as! [String: AnyObject]
+        var weatherDictDaily = weatherData["daily"]![0] as! [String: AnyObject]
         
         dateAndTime = NSDate(timeIntervalSince1970: weatherDictDaily["time"] as! TimeInterval)
 
@@ -351,21 +377,21 @@ struct Weather {
     
     //add the weather get function within the weather class
     
-    /*private let darkSkyBaseURL = "https://api.darksky.net/forecast"
-    private let darkSkyAPIKey = ProcessInfo.processInfo.environment["DARKSKY_API"]!
+    /*private var darkSkyBaseURL = "https://api.darksky.net/forecast"
+    private var darkSkyAPIKey = ProcessInfo.processInfo.environment["DARKSKY_API"]!
     
     func getWeather(coordinates: String) {
         print("started function")
         
         // This is a pretty simple networking task, so the shared session will do.
-        let session = URLSession.shared
+        var session = URLSession.shared
         
-        let weatherRequestURL = URL(string: "\(darkSkyBaseURL)/\(darkSkyAPIKey)/\(coordinates)")!
+        var weatherRequestURL = URL(string: "\(darkSkyBaseURL)/\(darkSkyAPIKey)/\(coordinates)")!
         
         // The data task retrieves the data.
-        let dataTask = session.dataTask(with: weatherRequestURL) {
+        var dataTask = session.dataTask(with: weatherRequestURL) {
             (data, response, error) -> Void in
-            if let error = error {
+            if var error = error {
                 // Case 1: Error
                 // We got some kind of error while trying to get data from the server.
                 print("Error:\n\(error)")
@@ -375,13 +401,13 @@ struct Weather {
                 // We got a response from the server!
                 do {
                     // Try to convert that data into a Swift dictionary
-                    let weather = try JSONSerialization.jsonObject(
+                    var weather = try JSONSerialization.jsonObject(
                         with: data!,
                         options: .mutableContainers) as! [String: AnyObject]
                     print("in do try catch")
                     //print("City: \(weather["timezone"]!)")
                 }
-                catch let jsonError as NSError {
+                catch var jsonError as NSError {
                     // An error occurred while trying to convert the data into a Swift dictionary.
                     print("JSON error description: \(jsonError.description)")
                 }
@@ -393,9 +419,36 @@ struct Weather {
     }*/
     init(weatherData: String) {
         //empty initialization
-        print("Got into empty initialization")
-        summary = ""
+        print("empty initialization")
+        
+        timezone = ""
+        
         city = ""
+        country = ""
+        
+        //current data
+        summary = ""
+        
+        currentDateAndtime = 0
+        
+        icon = ""
+        
+        precipIntensity = 0
+        
+        precipProbability = 0
+        
+        precipType = ""
+        
+        temperature = 0
+        
+        apparentTemperature = 0
+        
+        humidity = 0
+        
+        windSpeed = 0
+        
+        //daily summary
+        dailySummary = ""
     }
 
 }
