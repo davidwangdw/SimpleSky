@@ -18,6 +18,7 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
     }
     override func viewDidLoad() {
 
+        print("in currentViewController")
         
         var weather: WeatherGetter!
         
@@ -33,6 +34,7 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
         //"°"
         degreeLabel.text = "20°"
         summaryLabel.text = weatherData.summary
+        //highTempLabel.text = weatherData
     }
     
     func didGetWeather(weather: Weather) {

@@ -15,6 +15,7 @@ class MainPageViewController : UIPageViewController {
     override func viewDidLoad() {
         // Set the dataSource and delegate in code.  
         // I can't figure out how to do this in the Storyboard!
+        print("in mainPageViewController")
         dataSource = self
         delegate = self
         // this sets the background color of the built-in paging dots

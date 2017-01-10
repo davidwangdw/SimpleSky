@@ -9,7 +9,7 @@ class DailyViewController: UIViewController {
         
         print("In daily view controller")
         
-        print(weatherData.city)
+        //print(weatherData.city)
         
         //didGetWeather(weather: weather)
         

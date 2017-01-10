@@ -16,10 +16,10 @@ struct Weather {
     var summary: String
     var timezone: String
     
-    var city: String
+    /*var city: String
     var country: String
     //var currentDateAndtime: NSDate
-    var currentDateAndtime: Intt
+    var currentDateAndtime: Int
     
     //weather icon
     var icon: String
@@ -35,7 +35,7 @@ struct Weather {
     var windSpeed: Double
     
     //hourly
-    var dailySummary: String
+    var dailySummary: String*/
     
     //do I actually need separate variables for all this stuff?
     //try this out then see if we can consolidate this
@@ -288,8 +288,8 @@ struct Weather {
         
         //separate timezone into city and country later
         
-        city = "city"
-        country = "country"
+        /*city = "city"
+        country = "country"*/
         
         //current data
         
@@ -297,7 +297,7 @@ struct Weather {
         
         summary = weatherDictCurrently?["summary"] as! String
         
-        currentDateAndtime = weatherDictCurrently?["time"] as! Int
+        /*currentDateAndtime = weatherDictCurrently?["time"] as! Int
         
         icon = weatherDictCurrently?["icon"] as! String
         
@@ -318,7 +318,7 @@ struct Weather {
         //daily summary
         
         let weatherDictDailyDetail = weatherData["daily"]
-        dailySummary = weatherDictDailyDetail?["summary"] as! String
+        dailySummary = weatherDictDailyDetail?["summary"] as! String*/
         
         /*
         
@@ -423,13 +423,13 @@ struct Weather {
         
         timezone = ""
         
-        city = ""
+        /*city = ""
         country = ""
         
-        //current data
+        //current data*/
         summary = ""
         
-        currentDateAndtime = 0
+        /*currentDateAndtime = 0
         
         icon = ""
         
@@ -448,7 +448,7 @@ struct Weather {
         windSpeed = 0
         
         //daily summary
-        dailySummary = ""
+        dailySummary = ""*/
     }
 
 }
