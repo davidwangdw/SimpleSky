@@ -16,26 +16,26 @@ struct Weather {
     var summary: String
     var timezone: String
     
-    /*var city: String
-    var country: String
+    //var city: String
+    //var country: String
     //var currentDateAndtime: NSDate
-    var currentDateAndtime: Int
+    //var currentDateAndtime: Int
     
     //weather icon
-    var icon: String
+    //var icon: String
     
-    var precipIntensity: Double
-    var precipProbability: Double
-    var precipType: String
+    //var precipIntensity: Double
+    //var precipProbability: Double
+    //var precipType: String
     
     var temperature: Double
-    var apparentTemperature: Double
+    //var apparentTemperature: Double
     
-    var humidity: Double
-    var windSpeed: Double
+    //var humidity: Double
+    //var windSpeed: Double
     
     //hourly
-    var dailySummary: String*/
+    //var dailySummary: String
     
     //do I actually need separate variables for all this stuff?
     //try this out then see if we can consolidate this
@@ -297,28 +297,28 @@ struct Weather {
         
         summary = weatherDictCurrently?["summary"] as! String
         
-        /*currentDateAndtime = weatherDictCurrently?["time"] as! Int
+        //currentDateAndtime = weatherDictCurrently?["time"] as! Int
         
-        icon = weatherDictCurrently?["icon"] as! String
+        //icon = weatherDictCurrently?["icon"] as! String
         
-        precipIntensity = weatherDictCurrently?["precipIntensity"] as! Double
+        //precipIntensity = weatherDictCurrently?["precipIntensity"] as! Double
         
-        precipProbability = weatherDictCurrently?["precipProbability"] as! Double
+        //precipProbability = weatherDictCurrently?["precipProbability"] as! Double
 
-        precipType = weatherDictCurrently?["precipType"] as! String
+        //precipType = weatherDictCurrently?["precipType"] as! String
         
         temperature = weatherDictCurrently?["temperature"] as! Double
         
-        apparentTemperature = weatherDictCurrently?["apparentTemperature"] as! Double
+        //apparentTemperature = weatherDictCurrently?["apparentTemperature"] as! Double
         
-        humidity = weatherDictCurrently?["humidity"] as! Double
+        //humidity = weatherDictCurrently?["humidity"] as! Double
         
-        windSpeed = weatherDictCurrently?["windSpeed"] as! Double
+        //windSpeed = weatherDictCurrently?["windSpeed"] as! Double
         
         //daily summary
         
-        let weatherDictDailyDetail = weatherData["daily"]
-        dailySummary = weatherDictDailyDetail?["summary"] as! String*/
+        //let weatherDictDailyDetail = weatherData["daily"]
+        //dailySummary = weatherDictDailyDetail?["summary"] as! String
         
         /*
         
@@ -429,26 +429,26 @@ struct Weather {
         //current data*/
         summary = ""
         
-        /*currentDateAndtime = 0
+        //currentDateAndtime = 0
         
-        icon = ""
+        //icon = ""
         
-        precipIntensity = 0
+        //precipIntensity = 0
         
-        precipProbability = 0
+        //precipProbability = 0
         
-        precipType = ""
+        //precipType = ""
         
         temperature = 0
         
-        apparentTemperature = 0
+        //apparentTemperature = 0
         
-        humidity = 0
+        //humidity = 0
         
-        windSpeed = 0
+        //windSpeed = 0
         
         //daily summary
-        dailySummary = ""*/
+        //dailySummary = ""
     }
 
 }
