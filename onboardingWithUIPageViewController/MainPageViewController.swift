@@ -21,7 +21,7 @@ class MainPageViewController : UIPageViewController {
         // this sets the background color of the built-in paging dots
         //view.backgroundColor = UIColor.darkGray
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background_black")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 
         
         setViewControllers([getCurrentViewController()], direction: .forward, animated: false, completion: nil)

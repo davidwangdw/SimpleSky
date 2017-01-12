@@ -26,6 +26,9 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
         
         weather.getWeather(coordinates: "40.781693,-73.966590")
         
+        highTempLabel.text = "0°"
+        lowTempLabel.text = "0°"
+        
         degreeLabel.text = "56°"
         
     }
@@ -34,12 +37,13 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
         //"°"
         degreeLabel.text = "20°"
         summaryLabel.text = weatherData.summary
-        //highTempLabel.text = weatherData
+        highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
+        lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
     }
     
     func didGetWeather(weather: Weather) {
         DispatchQueue.main.async {
-            print(weather.summary)
+            
         }
         
         weatherData = weather

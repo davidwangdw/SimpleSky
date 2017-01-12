@@ -56,6 +56,8 @@ class WeatherGetter {
                     let weather = Weather(weatherData: weatherData)
                     
                     //print("City: \(weather["timezone"]!)")
+                    //print("City: \(weather["currently"]!["summary"]!!)")
+                    //print("Longitude: \(weather["coord"]!["lon"]!!)")
                     
                     // If we made it to this point, we've successfully converted the
                     // JSON-formatted weather data into a Swift dictionary.

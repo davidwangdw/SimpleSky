@@ -22,7 +22,7 @@ struct Weather {
     //var currentDateAndtime: Int
     
     //weather icon
-    //var icon: String
+    var icon: String
     
     //var precipIntensity: Double
     //var precipProbability: Double
@@ -262,16 +262,16 @@ struct Weather {
     
     
     //specific daily data
-    /*var sunriseTime:NSDate
-    var sunsetTime: NSDate
+    //var sunriseTime:NSDate
+    //var sunsetTime: NSDate
     var temperatureMin: Double
-    var temperatureMinTime: NSDate
+    //var temperatureMinTime: NSDate
     var temperatureMax: Double
-    var temperatureMaxTime: NSDate
-    var apparentTemperatureMin: Double
-    var apparentTemperatureMinTime: NSDate
-    var apparentTemperatureMax: Double
-    var apparentTemperatureMaxTime: NSDate*/
+    //var temperatureMaxTime: NSDate
+    //var apparentTemperatureMin: Double
+    //var apparentTemperatureMinTime: NSDate
+    //var apparentTemperatureMax: Double
+    //var apparentTemperatureMaxTime: NSDate
     
     /*var alertTitle: String
     var alertTime: NSDate
@@ -297,9 +297,11 @@ struct Weather {
         
         summary = weatherDictCurrently?["summary"] as! String
         
+        print(summary)
+        
         //currentDateAndtime = weatherDictCurrently?["time"] as! Int
         
-        //icon = weatherDictCurrently?["icon"] as! String
+        icon = weatherDictCurrently?["icon"] as! String
         
         //precipIntensity = weatherDictCurrently?["precipIntensity"] as! Double
         
@@ -317,8 +319,38 @@ struct Weather {
         
         //daily summary
         
-        //let weatherDictDailyDetail = weatherData["daily"]
+        let weatherDictDaily = weatherData["daily"]
+        //let weatherDictDailyData = weatherDictDaily?["data"]
+        
+        //if weatherDictDaily != nil {
+            
+        let weatherDictDailyData = weatherDictDaily as! [String: AnyObject]
+            
+        let weatherDictDailyDataDetails = weatherDictDailyData["data"] as! [[String : AnyObject]]
+        
+            let weatherDictDailyDataDetails1 = weatherDictDailyDataDetails[0] as! [String: AnyObject]
+
+        print("here is the important info")
+            temperatureMin = weatherDictDailyDataDetails1["temperatureMin"] as! Double
+        temperatureMax = weatherDictDailyDataDetails1["temperatureMax"] as! Double
+            print(temperatureMin)
+            
+        //print(weatherDictDailyDataDetails1["temperatureMin"])
+        //print(weatherDictDailyDataDetails[0])
+        //print(weatherDictDailyData)
+        
+        //}
+        
+        //temperatureMin = weatherDictDailyData["temperatureMin"] as! Double
+        //temperatureMin = weatherDictDailyData["temperatureMin"] as! Double
+        
+        //print(temperatureMin)
+        //temperatureMax = weatherDictDailyData["temperatureMax"] as! Double
+        
+        //print(temperatureMin)
         //dailySummary = weatherDictDailyDetail?["summary"] as! String
+        
+        //temperatureMin = 0
         
         /*
         
@@ -431,7 +463,7 @@ struct Weather {
         
         //currentDateAndtime = 0
         
-        //icon = ""
+        icon = ""
         
         //precipIntensity = 0
         
@@ -440,6 +472,9 @@ struct Weather {
         //precipType = ""
         
         temperature = 0
+        
+        temperatureMin = 0
+        temperatureMax = 0
         
         //apparentTemperature = 0
         
