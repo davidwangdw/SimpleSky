@@ -29,7 +29,7 @@ struct Weather {
     //var precipType: String
     
     var temperature: Double
-    //var apparentTemperature: Double
+    var apparentTemperature: Double
     
     //var humidity: Double
     //var windSpeed: Double
@@ -310,6 +310,7 @@ struct Weather {
         //precipType = weatherDictCurrently?["precipType"] as! String
         
         temperature = weatherDictCurrently?["temperature"] as! Double
+        apparentTemperature = weatherDictCurrently?["apparentTemperature"] as! Double
         
         //apparentTemperature = weatherDictCurrently?["apparentTemperature"] as! Double
         
@@ -407,48 +408,6 @@ struct Weather {
         icon = weatherDictHourly["summary"] as! String*/
     }
     
-    //add the weather get function within the weather class
-    
-    /*private var darkSkyBaseURL = "https://api.darksky.net/forecast"
-    private var darkSkyAPIKey = ProcessInfo.processInfo.environment["DARKSKY_API"]!
-    
-    func getWeather(coordinates: String) {
-        print("started function")
-        
-        // This is a pretty simple networking task, so the shared session will do.
-        var session = URLSession.shared
-        
-        var weatherRequestURL = URL(string: "\(darkSkyBaseURL)/\(darkSkyAPIKey)/\(coordinates)")!
-        
-        // The data task retrieves the data.
-        var dataTask = session.dataTask(with: weatherRequestURL) {
-            (data, response, error) -> Void in
-            if var error = error {
-                // Case 1: Error
-                // We got some kind of error while trying to get data from the server.
-                print("Error:\n\(error)")
-            }
-            else {
-                // Case 2: Success
-                // We got a response from the server!
-                do {
-                    // Try to convert that data into a Swift dictionary
-                    var weather = try JSONSerialization.jsonObject(
-                        with: data!,
-                        options: .mutableContainers) as! [String: AnyObject]
-                    print("in do try catch")
-                    //print("City: \(weather["timezone"]!)")
-                }
-                catch var jsonError as NSError {
-                    // An error occurred while trying to convert the data into a Swift dictionary.
-                    print("JSON error description: \(jsonError.description)")
-                }
-            }
-        }
-        
-        // The data task is set up...launch it!
-        dataTask.resume()
-    }*/
     init(weatherData: String) {
         //empty initialization
         print("empty initialization")
@@ -476,7 +435,7 @@ struct Weather {
         temperatureMin = 0
         temperatureMax = 0
         
-        //apparentTemperature = 0
+        apparentTemperature = 0
         
         //humidity = 0
         

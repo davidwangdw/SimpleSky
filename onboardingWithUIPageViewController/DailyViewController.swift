@@ -5,6 +5,7 @@ class DailyViewController: UIViewController {
     
     //var city: String = "Not set"
     
+    
     override func viewDidLoad() {
         
         print("In daily view controller")

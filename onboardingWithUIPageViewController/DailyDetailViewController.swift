@@ -9,11 +9,13 @@
 import UIKit
 
 class DailyDetailViewController: UIViewController {
+    @IBOutlet weak var apparentTempLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("In daily detail view controller")
+        apparentTempLabel.text = String(format:"%.0f", weatherData.apparentTemperature) + "°"
 
         // Do any additional setup after loading the view.
     }

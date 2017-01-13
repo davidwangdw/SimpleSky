@@ -35,7 +35,7 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
     
     func updateLabels() {
         //"°"
-        degreeLabel.text = "20°"
+        degreeLabel.text = String(format:"%.0f", weatherData.temperature) + "°"
         summaryLabel.text = weatherData.summary
         highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
         lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
