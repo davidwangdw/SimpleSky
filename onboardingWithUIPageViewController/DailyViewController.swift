@@ -3,44 +3,38 @@ import UIKit
 
 class DailyViewController: UIViewController {
     
-    //var city: String = "Not set"
+    //use a hidden label to manage all text colors
+    @IBOutlet weak var hiddenLabel: UILabel!
     
+    @IBOutlet weak var weeklyWeatherView: UIView!
     
     override func viewDidLoad() {
-        
-        print("In daily view controller")
         
         //print(weatherData.city)
         
         //didGetWeather(weather: weather)
         
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        
+        visualEffectView.frame = weeklyWeatherView.bounds
+        
+        weeklyWeatherView.insertSubview(visualEffectView, at: 0)
+        
     }
-    
-    func didGetWeather(weather: Weather) {
-        DispatchQueue.main.async {
-            print(weather.summary)
-        }
-    }
-    
     
     /*func didGetWeather(weather: Weather) {
         DispatchQueue.main.async {
-            print(weather.city)
+            print(weather.summary)
         }
-    }
-    func didNotGetWeather(error: NSError) {
-        // This method is called asynchronously, which means it won't execute in the main queue.
-        // ALl UI code needs to execute in the main queue, which is why we're wrapping the call
-        // to showSimpleAlert(title:message:) in a dispatch_async() call.
-        //DispatchQueue.main.asynchronously() {
-        /*self.showSimpleAlert(title: "Can't get the weather",
-         message: "The weather service isn't responding.")*/
-        //}
-        DispatchQueue.main.async {
-            //self.showSimpleAlert(title: "Can't get the weather",
-            //message: "The weather service isn't responding.")
-        }
-        print("didNotGetWeather error: \(error)")
     }*/
+    
+    func colorLabels() {
+        
+    }
+    
+    func updateLabels() {
+        
+    }
+    
     
 }

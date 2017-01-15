@@ -35,7 +35,7 @@ struct Weather {
     //var windSpeed: Double
     
     //hourly
-    //var dailySummary: String
+    var dailySummary: String
     
     //do I actually need separate variables for all this stuff?
     //try this out then see if we can consolidate this
@@ -197,10 +197,6 @@ struct Weather {
     var dailyTime4: NSDate
     var dailyTime5: NSDate
     var dailyTime6: NSDate
-    var dailyTime7: NSDate
-    var dailyTime8: NSDate
-    var dailyTime9: NSDate
-    var dailyTime10: NSDate
     
     var dailySummary1: String
     var dailySummary2: String
@@ -208,10 +204,6 @@ struct Weather {
     var dailySummary4: String
     var dailySummary5: String
     var dailySummary6: String
-    var dailySummary7: String
-    var dailySummary8: String
-    var dailySummary9: String
-    var dailySummary10: String
     
     var dailyIcon1: String
     var dailyIcon2: String
@@ -219,21 +211,13 @@ struct Weather {
     var dailyIcon4: String
     var dailyIcon5: String
     var dailyIcon6: String
-    var dailyIcon7: String
-    var dailyIcon8: String
-    var dailyIcon9: String
-    var dailyIcon10: String
     
     var dailyPrecipProbability1: Double
     var dailyPrecipProbability2: Double
     var dailyPrecipProbability3: Double
     var dailyPrecipProbability4: Double
     var dailyPrecipProbability5: Double
-    var dailyPrecipProbability6: Double
-    var dailyPrecipProbability7: Double
-    var dailyPrecipProbability8: Double
-    var dailyPrecipProbability9: Double
-    var dailyPrecipProbability10: Double*/
+    var dailyPrecipProbability6: Double*/
     
     
 
@@ -251,8 +235,7 @@ struct Weather {
     
     //this is specific weather data
     
-    var icon: String
-    var precipProbability: Double
+    
     var precipType: String
     var temperature: Double
     var apparentTemperature: Double
@@ -277,6 +260,8 @@ struct Weather {
     var alertTime: NSDate
     var alertExpire: NSDate
     var alertDescription: String*/
+    
+    var precipProbability: Double
 
     
     init(weatherData: [String: AnyObject]) {
@@ -297,15 +282,13 @@ struct Weather {
         
         summary = weatherDictCurrently?["summary"] as! String
         
-        print(summary)
-        
         //currentDateAndtime = weatherDictCurrently?["time"] as! Int
         
         icon = weatherDictCurrently?["icon"] as! String
         
         //precipIntensity = weatherDictCurrently?["precipIntensity"] as! Double
         
-        //precipProbability = weatherDictCurrently?["precipProbability"] as! Double
+        precipProbability = weatherDictCurrently?["precipProbability"] as! Double
 
         //precipType = weatherDictCurrently?["precipType"] as! String
         
@@ -321,6 +304,7 @@ struct Weather {
         //daily summary
         
         let weatherDictDaily = weatherData["daily"]
+        dailySummary = weatherDictDaily?["summary"] as! String
         //let weatherDictDailyData = weatherDictDaily?["data"]
         
         //if weatherDictDaily != nil {
@@ -329,12 +313,12 @@ struct Weather {
             
         let weatherDictDailyDataDetails = weatherDictDailyData["data"] as! [[String : AnyObject]]
         
-            let weatherDictDailyDataDetails1 = weatherDictDailyDataDetails[0] as! [String: AnyObject]
+        let weatherDictDailyDataDetails1 = weatherDictDailyDataDetails[0]
 
-        print("here is the important info")
-            temperatureMin = weatherDictDailyDataDetails1["temperatureMin"] as! Double
+        temperatureMin = weatherDictDailyDataDetails1["temperatureMin"] as! Double
         temperatureMax = weatherDictDailyDataDetails1["temperatureMax"] as! Double
-            print(temperatureMin)
+        
+        
             
         //print(weatherDictDailyDataDetails1["temperatureMin"])
         //print(weatherDictDailyDataDetails[0])
@@ -436,6 +420,10 @@ struct Weather {
         temperatureMax = 0
         
         apparentTemperature = 0
+        
+        precipProbability = 0
+        
+        dailySummary = ""
         
         //humidity = 0
         

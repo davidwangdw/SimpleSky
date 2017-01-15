@@ -11,26 +11,53 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
     @IBOutlet weak var degreeLabel: UILabel!
     @IBOutlet weak var highTempLabel: UILabel!
     @IBOutlet weak var lowTempLabel: UILabel!
-
+    
+    //use a hidden label to manage all text colors
+    @IBOutlet weak var hiddenLabel: UILabel!
     
     @IBAction func updateWeather(_ sender: Any) {
-        updateLabels()
-    }
-    override func viewDidLoad() {
 
-        print("in currentViewController")
-        
         var weather: WeatherGetter!
-        
+            
         weather = WeatherGetter(delegate: self)
-        
+            
         weather.getWeather(coordinates: "40.781693,-73.966590")
         
-        highTempLabel.text = "0°"
-        lowTempLabel.text = "0°"
+        updateLabels()
+    }
+    
+    //terrible way to implement viewdidload - change later
+    var initialized: Int = 0
+    override func viewDidLoad() {
         
-        degreeLabel.text = "56°"
+        print(initialized)
         
+        hiddenLabel.textColor = UIColor.white
+        
+        colorLabels()
+        
+        //terrible way to implement viewdidload = change later
+        if initialized == 0 {
+            initializeLabels()
+            initialized += 1
+        }
+        
+        
+        
+    }
+    
+    func initializeLabels() {
+        highTempLabel.text = ""
+        lowTempLabel.text = ""
+        degreeLabel.text = ""
+        summaryLabel.text = ""
+    }
+    
+    func colorLabels() {
+        degreeLabel.textColor = hiddenLabel.textColor
+        highTempLabel.textColor = hiddenLabel.textColor
+        lowTempLabel.textColor = hiddenLabel.textColor
+        summaryLabel.textColor = hiddenLabel.textColor
     }
     
     func updateLabels() {

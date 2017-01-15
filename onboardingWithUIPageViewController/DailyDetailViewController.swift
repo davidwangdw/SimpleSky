@@ -3,21 +3,48 @@
 //  SimpleSky
 //
 //  Created by David Wang on 1/7/17.
-//  Copyright © 2017 Thorn Technologies. All rights reserved.
-//
+//  Copyright © 2017
 
 import UIKit
 
 class DailyDetailViewController: UIViewController {
+    
     @IBOutlet weak var apparentTempLabel: UILabel!
     
+    @IBOutlet weak var weatherDetailText: UITextView!
+    
+    //use a hidden label to manage all text colors
+    @IBOutlet weak var hiddenLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        apparentTempLabel.text = String(format:"%.0f", weatherData.apparentTemperature) + "°"
 
-        // Do any additional setup after loading the view.
+        
+        hiddenLabel.textColor = UIColor.white
+        
+        colorLabels()
+        
+        updateLabels() 
+    }
+    
+    func initializeLabels() {
+        
+        apparentTempLabel.text = ""
+        weatherDetailText.text = ""
+        
+    }
+    
+    func colorLabels() {
+        apparentTempLabel.textColor = hiddenLabel.textColor
+        
+        weatherDetailText.textColor = hiddenLabel.textColor
+    }
+    
+    func updateLabels() {
+        apparentTempLabel.text = String(format:"%.0f", weatherData.apparentTemperature) + "°"
+        
+        weatherDetailText.text = weatherData.dailySummary
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,14 +53,15 @@ class DailyDetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension UIImageView{
+    func blurImage()
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+
+        self.addSubview(blurEffectView)
     }
-    */
-
 }

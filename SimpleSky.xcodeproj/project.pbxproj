@@ -73,8 +73,8 @@
 		FC5C4D5C1B7AB58100D3E6BC = {
 			isa = PBXGroup;
 			children = (
-				FC5C4D671B7AB58100D3E6BC /* onboardingWithUIPageViewController */,
-				FC5C4D7D1B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests */,
+				FC5C4D671B7AB58100D3E6BC /* SimpleSky */,
+				FC5C4D7D1B7AB58200D3E6BC /* SimpleSkyTests */,
 				FC5C4D661B7AB58100D3E6BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,23 +88,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC5C4D671B7AB58100D3E6BC /* onboardingWithUIPageViewController */ = {
+		FC5C4D671B7AB58100D3E6BC /* SimpleSky */ = {
 			isa = PBXGroup;
 			children = (
 				FC5C4D6A1B7AB58100D3E6BC /* AppDelegate.swift */,
-				FC5C4D6E1B7AB58100D3E6BC /* Main.storyboard */,
+				FC5C4D8A1B7ABA8200D3E6BC /* CurrentViewController.swift */,
 				21C0A0241E21B1CC006DAFE1 /* DailyDetailViewController.swift */,
-				217DC4E21E21509C0049CE73 /* Weather.swift */,
-				217DC4E31E21509C0049CE73 /* WeatherGetter.swift */,
+				FC5C4D8C1B7ABA8D00D3E6BC /* DailyViewController.swift */,
+				FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */,
 				FC5C4D711B7AB58100D3E6BC /* Images.xcassets */,
 				FC5C4D731B7AB58100D3E6BC /* LaunchScreen.xib */,
-				FC5C4D681B7AB58100D3E6BC /* Supporting Files */,
+				FC5C4D6E1B7AB58100D3E6BC /* Main.storyboard */,
 				FC5C4D901B7ABAEF00D3E6BC /* MainPageViewController.swift */,
-				FC5C4D8A1B7ABA8200D3E6BC /* CurrentViewController.swift */,
-				FC5C4D8C1B7ABA8D00D3E6BC /* DailyViewController.swift */,
 				FC5C4D8E1B7ABA9700D3E6BC /* WeeklyViewController.swift */,
-				FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */,
+				FC5C4D681B7AB58100D3E6BC /* Supporting Files */,
+				217DC4E21E21509C0049CE73 /* Weather.swift */,
+				217DC4E31E21509C0049CE73 /* WeatherGetter.swift */,
 			);
+			name = SimpleSky;
 			path = onboardingWithUIPageViewController;
 			sourceTree = "<group>";
 		};
@@ -116,12 +117,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FC5C4D7D1B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests */ = {
+		FC5C4D7D1B7AB58200D3E6BC /* SimpleSkyTests */ = {
 			isa = PBXGroup;
 			children = (
 				FC5C4D801B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests.swift */,
 				FC5C4D7E1B7AB58200D3E6BC /* Supporting Files */,
 			);
+			name = SimpleSkyTests;
 			path = onboardingWithUIPageViewControllerTests;
 			sourceTree = "<group>";
 		};
