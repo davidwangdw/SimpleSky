@@ -394,8 +394,7 @@ struct Weather {
     
     init(weatherData: String) {
         //empty initialization
-        print("empty initialization")
-        
+
         timezone = ""
         
         /*city = ""

@@ -3,6 +3,8 @@
 import UIKit
 
 var weatherData = Weather(weatherData: "")
+//terrible way to implement check - change later
+var initialized: Int = 0
 
 class CurrentViewController : UIViewController, WeatherGetterDelegate {
     
@@ -11,6 +13,8 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
     @IBOutlet weak var degreeLabel: UILabel!
     @IBOutlet weak var highTempLabel: UILabel!
     @IBOutlet weak var lowTempLabel: UILabel!
+    
+    @IBOutlet weak var cityLabel: UILabel!
     
     //use a hidden label to manage all text colors
     @IBOutlet weak var hiddenLabel: UILabel!
@@ -23,14 +27,12 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
             
         weather.getWeather(coordinates: "40.781693,-73.966590")
         
-        updateLabels()
+        initialized = 1
+
     }
+
     
-    //terrible way to implement viewdidload - change later
-    var initialized: Int = 0
     override func viewDidLoad() {
-        
-        print(initialized)
         
         hiddenLabel.textColor = UIColor.white
         
@@ -39,7 +41,9 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
         //terrible way to implement viewdidload = change later
         if initialized == 0 {
             initializeLabels()
-            initialized += 1
+            
+        } else {
+            updateLabels()
         }
         
         
@@ -58,6 +62,7 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
         highTempLabel.textColor = hiddenLabel.textColor
         lowTempLabel.textColor = hiddenLabel.textColor
         summaryLabel.textColor = hiddenLabel.textColor
+        cityLabel.textColor = hiddenLabel.textColor
     }
     
     func updateLabels() {
@@ -70,10 +75,13 @@ class CurrentViewController : UIViewController, WeatherGetterDelegate {
     
     func didGetWeather(weather: Weather) {
         DispatchQueue.main.async {
-            
+            weatherData = weather
+            self.updateLabels()
         }
         
-        weatherData = weather
+        
+        
+        
     }
     func didNotGetWeather(error: NSError) {
         // This method is called asynchronously, which means it won't execute in the main queue.

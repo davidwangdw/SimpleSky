@@ -13,9 +13,7 @@ class MainPageViewController : UIPageViewController {
     var imageView: UIImageView!
     
     override func viewDidLoad() {
-        // Set the dataSource and delegate in code.  
-        // I can't figure out how to do this in the Storyboard!
-        print("in mainPageViewController")
+
         dataSource = self
         delegate = self
         // this sets the background color of the built-in paging dots
@@ -70,6 +68,13 @@ extension MainPageViewController : UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if viewController.isKind(of: CurrentViewController.self) {
             // 0 -> 1
+            //doesn't allow you to continue if the weather is not updated
+            /*if initialized == 0 {
+                //do nothing
+                return nil
+            } else {
+                return getDailyDetailViewController()
+            }*/
             return getDailyDetailViewController()
         } else if viewController.isKind(of: DailyDetailViewController.self) {
             return getDailyViewController()

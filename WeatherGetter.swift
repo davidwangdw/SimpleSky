@@ -47,7 +47,6 @@ class WeatherGetter {
                 // Case 2: Success
                 // We got data from the server!
                 do {
-                    print("got into do block")
                     // Try to convert that data into a Swift dictionary
                     let weatherData = try JSONSerialization.jsonObject(
                         with: data!,
@@ -78,7 +77,7 @@ class WeatherGetter {
         
         // The data task is set up...launch it!
         dataTask.resume()
-    }        // The data task is set up...launch it!
+    }        
 
     
 
