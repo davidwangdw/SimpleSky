@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  onboardingWithUIPageViewController
+//  UIPageViewController Post
 //
-//  Created by Robert Chen on 8/11/15.
-//  Copyright (c) 2015 Thorn Technologies. All rights reserved.
+//  Created by Jeffrey Burt on 12/11/15.
+//  Copyright © 2015 Atomic Object. All rights reserved.
 //
 
 import UIKit

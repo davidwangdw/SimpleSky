@@ -77,8 +77,8 @@ class WeatherGetter {
         
         // The data task is set up...launch it!
         dataTask.resume()
-    }        
-
+    }
     
-
+    
+    
 }

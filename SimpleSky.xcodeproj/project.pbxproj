@@ -7,60 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		217DC4E41E21509C0049CE73 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DC4E21E21509C0049CE73 /* Weather.swift */; };
-		217DC4E51E21509C0049CE73 /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DC4E31E21509C0049CE73 /* WeatherGetter.swift */; };
-		21C0A0251E21B1CC006DAFE1 /* DailyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0A0241E21B1CC006DAFE1 /* DailyDetailViewController.swift */; };
-		FC5C4D6B1B7AB58100D3E6BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D6A1B7AB58100D3E6BC /* AppDelegate.swift */; };
-		FC5C4D701B7AB58100D3E6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5C4D6E1B7AB58100D3E6BC /* Main.storyboard */; };
-		FC5C4D721B7AB58100D3E6BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5C4D711B7AB58100D3E6BC /* Images.xcassets */; };
-		FC5C4D751B7AB58100D3E6BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC5C4D731B7AB58100D3E6BC /* LaunchScreen.xib */; };
-		FC5C4D811B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D801B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests.swift */; };
-		FC5C4D8B1B7ABA8200D3E6BC /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D8A1B7ABA8200D3E6BC /* CurrentViewController.swift */; };
-		FC5C4D8D1B7ABA8D00D3E6BC /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D8C1B7ABA8D00D3E6BC /* DailyViewController.swift */; };
-		FC5C4D8F1B7ABA9700D3E6BC /* WeeklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D8E1B7ABA9700D3E6BC /* WeeklyViewController.swift */; };
-		FC5C4D911B7ABAEF00D3E6BC /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D901B7ABAEF00D3E6BC /* MainPageViewController.swift */; };
-		FCBFD5FD1B7AE26D008EC5A4 /* HelperLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */; };
+		216F239A1E569E14007CD1B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028BB951C1B0B980040AE31 /* AppDelegate.swift */; };
+		216F239B1E569E14007CD1B5 /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23821E569C5D007CD1B5 /* CurrentViewController.swift */; };
+		216F239C1E569E14007CD1B5 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23841E569C6E007CD1B5 /* DetailedViewController.swift */; };
+		216F239D1E569E14007CD1B5 /* HourlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23861E569C78007CD1B5 /* HourlyViewController.swift */; };
+		216F239E1E569E14007CD1B5 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23881E569C83007CD1B5 /* DailyViewController.swift */; };
+		216F239F1E569E14007CD1B5 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D7B5221C62457A0024DAE5 /* TutorialViewController.swift */; };
+		216F23A01E569E14007CD1B5 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028BBC71C1B11A70040AE31 /* TutorialPageViewController.swift */; };
+		216F23A51E569EB2007CD1B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216F23A11E569EB2007CD1B5 /* LaunchScreen.storyboard */; };
+		216F23A61E569EB2007CD1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216F23A31E569EB2007CD1B5 /* Main.storyboard */; };
+		216F23A81E569EFA007CD1B5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23A71E569EFA007CD1B5 /* Weather.swift */; };
+		216F23AA1E569F09007CD1B5 /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23A91E569F09007CD1B5 /* WeatherGetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC5C4D7B1B7AB58200D3E6BC /* PBXContainerItemProxy */ = {
+		0028BBAB1C1B0B980040AE31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FC5C4D5D1B7AB58100D3E6BC /* Project object */;
+			containerPortal = 0028BB8A1C1B0B980040AE31 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FC5C4D641B7AB58100D3E6BC;
-			remoteInfo = onboardingWithUIPageViewController;
+			remoteGlobalIDString = 0028BB911C1B0B980040AE31;
+			remoteInfo = "UIPageViewController Post";
+		};
+		0028BBB61C1B0B980040AE31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0028BB8A1C1B0B980040AE31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0028BB911C1B0B980040AE31;
+			remoteInfo = "UIPageViewController Post";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		217DC4E21E21509C0049CE73 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = SOURCE_ROOT; };
-		217DC4E31E21509C0049CE73 /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = SOURCE_ROOT; };
-		21C0A0241E21B1CC006DAFE1 /* DailyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDetailViewController.swift; sourceTree = "<group>"; };
-		FC5C4D651B7AB58100D3E6BC /* SimpleSky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSky.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC5C4D691B7AB58100D3E6BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC5C4D6A1B7AB58100D3E6BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC5C4D6F1B7AB58100D3E6BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FC5C4D711B7AB58100D3E6BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC5C4D741B7AB58100D3E6BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FC5C4D7A1B7AB58200D3E6BC /* SimpleSkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC5C4D7F1B7AB58200D3E6BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC5C4D801B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingWithUIPageViewControllerTests.swift; sourceTree = "<group>"; };
-		FC5C4D8A1B7ABA8200D3E6BC /* CurrentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
-		FC5C4D8C1B7ABA8D00D3E6BC /* DailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
-		FC5C4D8E1B7ABA9700D3E6BC /* WeeklyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyViewController.swift; sourceTree = "<group>"; };
-		FC5C4D901B7ABAEF00D3E6BC /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperLibrary.swift; sourceTree = "<group>"; };
+		0028BB921C1B0B980040AE31 /* SimpleSky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0028BB951C1B0B980040AE31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SimpleSky/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		0028BBA01C1B0B980040AE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SimpleSky/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		0028BBA51C1B0B980040AE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SimpleSky/Info.plist; sourceTree = SOURCE_ROOT; };
+		0028BBAA1C1B0B980040AE31 /* SimpleSkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0028BBB51C1B0B980040AE31 /* SimpleSkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0028BBC71C1B11A70040AE31 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialPageViewController.swift; path = SimpleSky/TutorialPageViewController.swift; sourceTree = SOURCE_ROOT; };
+		00D7B5221C62457A0024DAE5 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = SimpleSky/TutorialViewController.swift; sourceTree = SOURCE_ROOT; };
+		216F23821E569C5D007CD1B5 /* CurrentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentViewController.swift; path = SimpleSky/CurrentViewController.swift; sourceTree = SOURCE_ROOT; };
+		216F23841E569C6E007CD1B5 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedViewController.swift; path = SimpleSky/DetailedViewController.swift; sourceTree = SOURCE_ROOT; };
+		216F23861E569C78007CD1B5 /* HourlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HourlyViewController.swift; path = SimpleSky/HourlyViewController.swift; sourceTree = SOURCE_ROOT; };
+		216F23881E569C83007CD1B5 /* DailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyViewController.swift; path = SimpleSky/DailyViewController.swift; sourceTree = SOURCE_ROOT; };
+		216F23A21E569EB2007CD1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SimpleSky/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		216F23A41E569EB2007CD1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SimpleSky/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		216F23A71E569EFA007CD1B5 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = SimpleSky/Weather.swift; sourceTree = SOURCE_ROOT; };
+		216F23A91E569F09007CD1B5 /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherGetter.swift; path = SimpleSky/WeatherGetter.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FC5C4D621B7AB58100D3E6BC /* Frameworks */ = {
+		0028BB8F1C1B0B980040AE31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC5C4D771B7AB58200D3E6BC /* Frameworks */ = {
+		0028BBA71C1B0B980040AE31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0028BBB21C1B0B980040AE31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,133 +81,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC5C4D5C1B7AB58100D3E6BC = {
+		0028BB891C1B0B980040AE31 = {
 			isa = PBXGroup;
 			children = (
-				FC5C4D671B7AB58100D3E6BC /* SimpleSky */,
-				FC5C4D7D1B7AB58200D3E6BC /* SimpleSkyTests */,
-				FC5C4D661B7AB58100D3E6BC /* Products */,
+				0028BB941C1B0B980040AE31 /* SimpleSky */,
+				0028BB931C1B0B980040AE31 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FC5C4D661B7AB58100D3E6BC /* Products */ = {
+		0028BB931C1B0B980040AE31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC5C4D651B7AB58100D3E6BC /* SimpleSky.app */,
-				FC5C4D7A1B7AB58200D3E6BC /* SimpleSkyTests.xctest */,
+				0028BB921C1B0B980040AE31 /* SimpleSky.app */,
+				0028BBAA1C1B0B980040AE31 /* SimpleSkyTests.xctest */,
+				0028BBB51C1B0B980040AE31 /* SimpleSkyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC5C4D671B7AB58100D3E6BC /* SimpleSky */ = {
+		0028BB941C1B0B980040AE31 /* SimpleSky */ = {
 			isa = PBXGroup;
 			children = (
-				FC5C4D6A1B7AB58100D3E6BC /* AppDelegate.swift */,
-				FC5C4D8A1B7ABA8200D3E6BC /* CurrentViewController.swift */,
-				21C0A0241E21B1CC006DAFE1 /* DailyDetailViewController.swift */,
-				FC5C4D8C1B7ABA8D00D3E6BC /* DailyViewController.swift */,
-				FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */,
-				FC5C4D711B7AB58100D3E6BC /* Images.xcassets */,
-				FC5C4D731B7AB58100D3E6BC /* LaunchScreen.xib */,
-				FC5C4D6E1B7AB58100D3E6BC /* Main.storyboard */,
-				FC5C4D901B7ABAEF00D3E6BC /* MainPageViewController.swift */,
-				FC5C4D8E1B7ABA9700D3E6BC /* WeeklyViewController.swift */,
-				FC5C4D681B7AB58100D3E6BC /* Supporting Files */,
-				217DC4E21E21509C0049CE73 /* Weather.swift */,
-				217DC4E31E21509C0049CE73 /* WeatherGetter.swift */,
+				0028BB951C1B0B980040AE31 /* AppDelegate.swift */,
+				0028BBA01C1B0B980040AE31 /* Assets.xcassets */,
+				216F23821E569C5D007CD1B5 /* CurrentViewController.swift */,
+				216F23881E569C83007CD1B5 /* DailyViewController.swift */,
+				216F23841E569C6E007CD1B5 /* DetailedViewController.swift */,
+				216F23861E569C78007CD1B5 /* HourlyViewController.swift */,
+				0028BBA51C1B0B980040AE31 /* Info.plist */,
+				216F23A11E569EB2007CD1B5 /* LaunchScreen.storyboard */,
+				216F23A31E569EB2007CD1B5 /* Main.storyboard */,
+				0028BBC71C1B11A70040AE31 /* TutorialPageViewController.swift */,
+				00D7B5221C62457A0024DAE5 /* TutorialViewController.swift */,
+				216F23A71E569EFA007CD1B5 /* Weather.swift */,
+				216F23A91E569F09007CD1B5 /* WeatherGetter.swift */,
 			);
 			name = SimpleSky;
-			path = onboardingWithUIPageViewController;
-			sourceTree = "<group>";
-		};
-		FC5C4D681B7AB58100D3E6BC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FC5C4D691B7AB58100D3E6BC /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FC5C4D7D1B7AB58200D3E6BC /* SimpleSkyTests */ = {
-			isa = PBXGroup;
-			children = (
-				FC5C4D801B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests.swift */,
-				FC5C4D7E1B7AB58200D3E6BC /* Supporting Files */,
-			);
-			name = SimpleSkyTests;
-			path = onboardingWithUIPageViewControllerTests;
-			sourceTree = "<group>";
-		};
-		FC5C4D7E1B7AB58200D3E6BC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FC5C4D7F1B7AB58200D3E6BC /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = "UIPageViewController Post";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC5C4D641B7AB58100D3E6BC /* SimpleSky */ = {
+		0028BB911C1B0B980040AE31 /* SimpleSky */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC5C4D841B7AB58200D3E6BC /* Build configuration list for PBXNativeTarget "SimpleSky" */;
+			buildConfigurationList = 0028BBBE1C1B0B980040AE31 /* Build configuration list for PBXNativeTarget "SimpleSky" */;
 			buildPhases = (
-				FC5C4D611B7AB58100D3E6BC /* Sources */,
-				FC5C4D621B7AB58100D3E6BC /* Frameworks */,
-				FC5C4D631B7AB58100D3E6BC /* Resources */,
+				0028BB8E1C1B0B980040AE31 /* Sources */,
+				0028BB8F1C1B0B980040AE31 /* Frameworks */,
+				0028BB901C1B0B980040AE31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SimpleSky;
-			productName = onboardingWithUIPageViewController;
-			productReference = FC5C4D651B7AB58100D3E6BC /* SimpleSky.app */;
+			productName = "UIPageViewController Post";
+			productReference = 0028BB921C1B0B980040AE31 /* SimpleSky.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC5C4D791B7AB58200D3E6BC /* SimpleSkyTests */ = {
+		0028BBA91C1B0B980040AE31 /* SimpleSkyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC5C4D871B7AB58200D3E6BC /* Build configuration list for PBXNativeTarget "SimpleSkyTests" */;
+			buildConfigurationList = 0028BBC11C1B0B980040AE31 /* Build configuration list for PBXNativeTarget "SimpleSkyTests" */;
 			buildPhases = (
-				FC5C4D761B7AB58200D3E6BC /* Sources */,
-				FC5C4D771B7AB58200D3E6BC /* Frameworks */,
-				FC5C4D781B7AB58200D3E6BC /* Resources */,
+				0028BBA61C1B0B980040AE31 /* Sources */,
+				0028BBA71C1B0B980040AE31 /* Frameworks */,
+				0028BBA81C1B0B980040AE31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FC5C4D7C1B7AB58200D3E6BC /* PBXTargetDependency */,
+				0028BBAC1C1B0B980040AE31 /* PBXTargetDependency */,
 			);
 			name = SimpleSkyTests;
-			productName = onboardingWithUIPageViewControllerTests;
-			productReference = FC5C4D7A1B7AB58200D3E6BC /* SimpleSkyTests.xctest */;
+			productName = "UIPageViewController PostTests";
+			productReference = 0028BBAA1C1B0B980040AE31 /* SimpleSkyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0028BBB41C1B0B980040AE31 /* SimpleSkyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0028BBC41C1B0B980040AE31 /* Build configuration list for PBXNativeTarget "SimpleSkyUITests" */;
+			buildPhases = (
+				0028BBB11C1B0B980040AE31 /* Sources */,
+				0028BBB21C1B0B980040AE31 /* Frameworks */,
+				0028BBB31C1B0B980040AE31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0028BBB71C1B0B980040AE31 /* PBXTargetDependency */,
+			);
+			name = SimpleSkyUITests;
+			productName = "UIPageViewController PostUITests";
+			productReference = 0028BBB51C1B0B980040AE31 /* SimpleSkyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FC5C4D5D1B7AB58100D3E6BC /* Project object */ = {
+		0028BB8A1C1B0B980040AE31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0730;
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Thorn Technologies";
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Seven Even";
 				TargetAttributes = {
-					FC5C4D641B7AB58100D3E6BC = {
-						CreatedOnToolsVersion = 6.4;
+					0028BB911C1B0B980040AE31 = {
+						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 98YT4HPVK9;
 						LastSwiftMigration = 0820;
 					};
-					FC5C4D791B7AB58200D3E6BC = {
-						CreatedOnToolsVersion = 6.4;
+					0028BBA91C1B0B980040AE31 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7UFKWHQKHW;
 						LastSwiftMigration = 0820;
-						TestTargetID = FC5C4D641B7AB58100D3E6BC;
+						TestTargetID = 0028BB911C1B0B980040AE31;
+					};
+					0028BBB41C1B0B980040AE31 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7UFKWHQKHW;
+						LastSwiftMigration = 0820;
+						TestTargetID = 0028BB911C1B0B980040AE31;
 					};
 				};
 			};
-			buildConfigurationList = FC5C4D601B7AB58100D3E6BC /* Build configuration list for PBXProject "SimpleSky" */;
+			buildConfigurationList = 0028BB8D1C1B0B980040AE31 /* Build configuration list for PBXProject "SimpleSky" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -204,29 +213,36 @@
 				en,
 				Base,
 			);
-			mainGroup = FC5C4D5C1B7AB58100D3E6BC;
-			productRefGroup = FC5C4D661B7AB58100D3E6BC /* Products */;
+			mainGroup = 0028BB891C1B0B980040AE31;
+			productRefGroup = 0028BB931C1B0B980040AE31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC5C4D641B7AB58100D3E6BC /* SimpleSky */,
-				FC5C4D791B7AB58200D3E6BC /* SimpleSkyTests */,
+				0028BB911C1B0B980040AE31 /* SimpleSky */,
+				0028BBA91C1B0B980040AE31 /* SimpleSkyTests */,
+				0028BBB41C1B0B980040AE31 /* SimpleSkyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FC5C4D631B7AB58100D3E6BC /* Resources */ = {
+		0028BB901C1B0B980040AE31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC5C4D701B7AB58100D3E6BC /* Main.storyboard in Resources */,
-				FC5C4D751B7AB58100D3E6BC /* LaunchScreen.xib in Resources */,
-				FC5C4D721B7AB58100D3E6BC /* Images.xcassets in Resources */,
+				216F23A51E569EB2007CD1B5 /* LaunchScreen.storyboard in Resources */,
+				216F23A61E569EB2007CD1B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC5C4D781B7AB58200D3E6BC /* Resources */ = {
+		0028BBA81C1B0B980040AE31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0028BBB31C1B0B980040AE31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,61 +252,72 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FC5C4D611B7AB58100D3E6BC /* Sources */ = {
+		0028BB8E1C1B0B980040AE31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC5C4D6B1B7AB58100D3E6BC /* AppDelegate.swift in Sources */,
-				217DC4E51E21509C0049CE73 /* WeatherGetter.swift in Sources */,
-				FCBFD5FD1B7AE26D008EC5A4 /* HelperLibrary.swift in Sources */,
-				FC5C4D8B1B7ABA8200D3E6BC /* CurrentViewController.swift in Sources */,
-				FC5C4D911B7ABAEF00D3E6BC /* MainPageViewController.swift in Sources */,
-				FC5C4D8F1B7ABA9700D3E6BC /* WeeklyViewController.swift in Sources */,
-				FC5C4D8D1B7ABA8D00D3E6BC /* DailyViewController.swift in Sources */,
-				217DC4E41E21509C0049CE73 /* Weather.swift in Sources */,
-				21C0A0251E21B1CC006DAFE1 /* DailyDetailViewController.swift in Sources */,
+				216F23A81E569EFA007CD1B5 /* Weather.swift in Sources */,
+				216F239A1E569E14007CD1B5 /* AppDelegate.swift in Sources */,
+				216F239B1E569E14007CD1B5 /* CurrentViewController.swift in Sources */,
+				216F239C1E569E14007CD1B5 /* DetailedViewController.swift in Sources */,
+				216F239D1E569E14007CD1B5 /* HourlyViewController.swift in Sources */,
+				216F239E1E569E14007CD1B5 /* DailyViewController.swift in Sources */,
+				216F239F1E569E14007CD1B5 /* TutorialViewController.swift in Sources */,
+				216F23AA1E569F09007CD1B5 /* WeatherGetter.swift in Sources */,
+				216F23A01E569E14007CD1B5 /* TutorialPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC5C4D761B7AB58200D3E6BC /* Sources */ = {
+		0028BBA61C1B0B980040AE31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC5C4D811B7AB58200D3E6BC /* onboardingWithUIPageViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0028BBB11C1B0B980040AE31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FC5C4D7C1B7AB58200D3E6BC /* PBXTargetDependency */ = {
+		0028BBAC1C1B0B980040AE31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC5C4D641B7AB58100D3E6BC /* SimpleSky */;
-			targetProxy = FC5C4D7B1B7AB58200D3E6BC /* PBXContainerItemProxy */;
+			target = 0028BB911C1B0B980040AE31 /* SimpleSky */;
+			targetProxy = 0028BBAB1C1B0B980040AE31 /* PBXContainerItemProxy */;
+		};
+		0028BBB71C1B0B980040AE31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0028BB911C1B0B980040AE31 /* SimpleSky */;
+			targetProxy = 0028BBB61C1B0B980040AE31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC5C4D6E1B7AB58100D3E6BC /* Main.storyboard */ = {
+		216F23A11E569EB2007CD1B5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FC5C4D6F1B7AB58100D3E6BC /* Base */,
+				216F23A21E569EB2007CD1B5 /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		FC5C4D731B7AB58100D3E6BC /* LaunchScreen.xib */ = {
+		216F23A31E569EB2007CD1B5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FC5C4D741B7AB58100D3E6BC /* Base */,
+				216F23A41E569EB2007CD1B5 /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FC5C4D821B7AB58200D3E6BC /* Debug */ = {
+		0028BBBC1C1B0B980040AE31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -303,15 +330,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -322,23 +347,21 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FC5C4D831B7AB58200D3E6BC /* Release */ = {
+		0028BBBD1C1B0B980040AE31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,10 +374,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -370,110 +391,135 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		FC5C4D851B7AB58200D3E6BC /* Debug */ = {
+		0028BBBF1C1B0B980040AE31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98YT4HPVK9;
-				INFOPLIST_FILE = onboardingWithUIPageViewController/Info.plist;
+				INFOPLIST_FILE = SimpleSky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang.SimpleSky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		FC5C4D861B7AB58200D3E6BC /* Release */ = {
+		0028BBC01C1B0B980040AE31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98YT4HPVK9;
-				INFOPLIST_FILE = onboardingWithUIPageViewController/Info.plist;
+				INFOPLIST_FILE = SimpleSky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang.SimpleSky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		FC5C4D881B7AB58200D3E6BC /* Debug */ = {
+		0028BBC21C1B0B980040AE31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = onboardingWithUIPageViewControllerTests/Info.plist;
+				INFOPLIST_FILE = "UIPageViewController PostTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thorntech.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomicobject.UIPageViewController-PostTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSky.app/SimpleSky";
 			};
 			name = Debug;
 		};
-		FC5C4D891B7AB58200D3E6BC /* Release */ = {
+		0028BBC31C1B0B980040AE31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = onboardingWithUIPageViewControllerTests/Info.plist;
+				INFOPLIST_FILE = "UIPageViewController PostTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thorntech.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomicobject.UIPageViewController-PostTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSky.app/SimpleSky";
+			};
+			name = Release;
+		};
+		0028BBC51C1B0B980040AE31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "UIPageViewController PostUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomicobject.UIPageViewController-PostUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "UIPageViewController Post";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0028BBC61C1B0B980040AE31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "UIPageViewController PostUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomicobject.UIPageViewController-PostUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "UIPageViewController Post";
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC5C4D601B7AB58100D3E6BC /* Build configuration list for PBXProject "SimpleSky" */ = {
+		0028BB8D1C1B0B980040AE31 /* Build configuration list for PBXProject "SimpleSky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC5C4D821B7AB58200D3E6BC /* Debug */,
-				FC5C4D831B7AB58200D3E6BC /* Release */,
+				0028BBBC1C1B0B980040AE31 /* Debug */,
+				0028BBBD1C1B0B980040AE31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC5C4D841B7AB58200D3E6BC /* Build configuration list for PBXNativeTarget "SimpleSky" */ = {
+		0028BBBE1C1B0B980040AE31 /* Build configuration list for PBXNativeTarget "SimpleSky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC5C4D851B7AB58200D3E6BC /* Debug */,
-				FC5C4D861B7AB58200D3E6BC /* Release */,
+				0028BBBF1C1B0B980040AE31 /* Debug */,
+				0028BBC01C1B0B980040AE31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC5C4D871B7AB58200D3E6BC /* Build configuration list for PBXNativeTarget "SimpleSkyTests" */ = {
+		0028BBC11C1B0B980040AE31 /* Build configuration list for PBXNativeTarget "SimpleSkyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC5C4D881B7AB58200D3E6BC /* Debug */,
-				FC5C4D891B7AB58200D3E6BC /* Release */,
+				0028BBC21C1B0B980040AE31 /* Debug */,
+				0028BBC31C1B0B980040AE31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0028BBC41C1B0B980040AE31 /* Build configuration list for PBXNativeTarget "SimpleSkyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0028BBC51C1B0B980040AE31 /* Debug */,
+				0028BBC61C1B0B980040AE31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FC5C4D5D1B7AB58100D3E6BC /* Project object */;
+	rootObject = 0028BB8A1C1B0B980040AE31 /* Project object */;
 }

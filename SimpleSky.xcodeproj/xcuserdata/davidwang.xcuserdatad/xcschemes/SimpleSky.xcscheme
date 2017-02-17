@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+               BlueprintIdentifier = "0028BB911C1B0B980040AE31"
                BuildableName = "SimpleSky.app"
                BlueprintName = "SimpleSky"
                ReferencedContainer = "container:SimpleSky.xcodeproj">
@@ -28,21 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FC5C4D791B7AB58200D3E6BC"
-               BuildableName = "SimpleSkyTests.xctest"
-               BlueprintName = "SimpleSkyTests"
-               ReferencedContainer = "container:SimpleSky.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+            BlueprintIdentifier = "0028BB911C1B0B980040AE31"
             BuildableName = "SimpleSky.app"
             BlueprintName = "SimpleSky"
             ReferencedContainer = "container:SimpleSky.xcodeproj">
@@ -65,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+            BlueprintIdentifier = "0028BB911C1B0B980040AE31"
             BuildableName = "SimpleSky.app"
             BlueprintName = "SimpleSky"
             ReferencedContainer = "container:SimpleSky.xcodeproj">
@@ -91,7 +81,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FC5C4D641B7AB58100D3E6BC"
+            BlueprintIdentifier = "0028BB911C1B0B980040AE31"
             BuildableName = "SimpleSky.app"
             BlueprintName = "SimpleSky"
             ReferencedContainer = "container:SimpleSky.xcodeproj">
@@ -103,7 +93,6 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "SimpleSky"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
