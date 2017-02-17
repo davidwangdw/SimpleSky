@@ -56,11 +56,27 @@ class DetailedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func updateLabels() {
+        
+        if weatherData.apparentTemperature != nil { //weather object does not have valid data
+            apparentTempLabel.text = String(format:"%.0f", weatherData.apparentTemperature) + "°"
+        } else {
+            apparentTempLabel.text = ""
+        }
+        
+        highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
+        lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
+        weatherDetailText.text = weatherData.dailySummary
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     /*override func viewDidAppear(_ animated: Bool) {
      //print("view appeared!")
@@ -95,19 +111,7 @@ class DetailedViewController: UIViewController {
      
      }
      
-     func updateLabels() {
-     
-     if weatherData.apparentTemperature != nil { //weather object does not have valid data
-     apparentTempLabel.text = String(format:"%.0f", weatherData.apparentTemperature) + "°"
-     } else {
-     apparentTempLabel.text = ""
-     }
-     
-     highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
-     lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
-     weatherDetailText.text = weatherData.dailySummary
-     
-     }*/
+     */
 
 
 }
