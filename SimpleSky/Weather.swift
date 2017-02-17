@@ -10,6 +10,9 @@ import Foundation
 
 struct Weather {
     
+    //this is a terrible way to do this - fix later
+    var initialized: Bool
+    
     //here we put all the returned weather data into nice neat variables
     //NOTE: This is actually really messy, we could probably do this a better way
     //but we will do this for now and fix it later if I have time!
@@ -44,14 +47,14 @@ struct Weather {
     
     var hourlySummary: String
     
-    var hourlyTimeArray = [NSDate]()
+    var hourlyTimeArray = [Int]()
     var hourlySummaryArray = [String]()
     var hourlyIconArray = [String]()
     var hourlyTemperatureArray = [Double]()
     
     //daily info
     
-    var dailyTimeArray = [NSDate]()
+    var dailyTimeArray = [String]()
     var dailySummaryArray = [String]()
     var dailyIconArray = [String]()
     var dailyTempHigh = [Double]()
@@ -95,6 +98,8 @@ struct Weather {
     
     init(weatherData: [String: AnyObject]) {
         
+        initialized = true
+        
         
         //overall table is weatherData["key"]
         
@@ -136,11 +141,15 @@ struct Weather {
         dailyTempHigh = []
         dailyTempLow = []
         
+        //for NS date functions
+        let calendar = NSCalendar.current
+        
         for i in 0 ... 23 {
             var weatherDictHourlyDataDetails = weatherDictHourlyDataDetails[i]
             let date = NSDate(timeIntervalSince1970: weatherDictHourlyDataDetails["time"] as! TimeInterval)
             //hourlyTimeArray.append(weatherDictHourlyDataDetails["time"] as! NSDate)
-            hourlyTimeArray.append(date)
+            let hour = calendar.component(.hour, from: date as Date)
+            hourlyTimeArray.append(hour)
             hourlySummaryArray.append(weatherDictHourlyDataDetails["summary"] as! String)
             hourlyIconArray.append(weatherDictHourlyDataDetails["icon"] as! String)
             hourlyTemperatureArray.append(weatherDictHourlyDataDetails["temperature"] as! Double)
@@ -159,12 +168,29 @@ struct Weather {
         for i in 0 ... 7 {
             var weatherDictDailyDataDetails = weatherDictDailyDataDetails[i]
             let date = NSDate(timeIntervalSince1970: weatherDictDailyDataDetails["time"] as! TimeInterval)
+            let day = calendar.component(.weekday, from: date as Date)
             if i == 0 { //first day, i.e. today
                 temperatureMin = weatherDictDailyDataDetails["temperatureMin"] as! Double
                 temperatureMax = weatherDictDailyDataDetails["temperatureMax"] as! Double
             }
-            //dailyTimeArray.append(weatherDictDailyDataDetails["time"] as! NSDate)
-            dailyTimeArray.append(date)
+            //add switch statement later
+            if day == 1 {
+                dailyTimeArray.append("Sunday")
+            } else if day == 2 {
+                dailyTimeArray.append("Monday")
+            } else if day == 3 {
+                dailyTimeArray.append("Tuesday")
+            } else if day == 4 {
+                dailyTimeArray.append("Wedensday")
+            } else if day == 5 {
+                dailyTimeArray.append("Thursday")
+            } else if day == 6 {
+                dailyTimeArray.append("Friday")
+            } else if day == 7 {
+                dailyTimeArray.append("Saturday")
+            } else {
+                dailyTimeArray.append("error")
+            }
             dailySummaryArray.append(weatherDictDailyDataDetails["summary"] as! String)
             dailyIconArray.append(weatherDictDailyDataDetails["icon"] as! String)
             dailyTempHigh.append(weatherDictDailyDataDetails["temperatureMax"] as! Double)
@@ -244,7 +270,10 @@ struct Weather {
     }
     
     init(weatherData: String) {
+        
+        
         //empty initialization
+        initialized = false
         
         timezone = ""
         

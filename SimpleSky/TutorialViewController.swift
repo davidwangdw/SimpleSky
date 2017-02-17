@@ -9,6 +9,11 @@
 import UIKit
 
 class TutorialViewController: UIViewController {
+    
+    //hide status bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var containerView: UIView!

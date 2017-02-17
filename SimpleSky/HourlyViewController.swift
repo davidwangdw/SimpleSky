@@ -41,17 +41,6 @@ class HourlyViewController: UIViewController, UITableViewDataSource, UITableView
         self.weatherTableView.reloadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     //table view delegate functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -62,16 +51,18 @@ class HourlyViewController: UIViewController, UITableViewDataSource, UITableView
         return 24
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: hourlyWeatherCellIdentifier, for: indexPath) as! HourlyWeatherCell
 
         if weatherData.temperature == nil {
             cell.hourlyWeatherHourLabel.text = ""
             cell.hourlyWeatherSummaryLabel.text = ""
-            cell.hourlyWeatherTempLabel.text = ""
             return cell
         } else {
+            cell.hourlyWeatherHourLabel.text = String(weatherData.hourlyTimeArray[indexPath.row]) + ":00"
             cell.hourlyWeatherSummaryLabel.text = weatherData.hourlySummaryArray[indexPath.row]
+            cell.hourlyWeatherTempLabel.text = String(format: "%.0f", weatherData.hourlyTemperatureArray[indexPath.row]) + "°"
             //cell.fruitImageView?.image = UIImage(named: fruitName)
             return cell
         }

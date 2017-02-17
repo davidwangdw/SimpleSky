@@ -44,7 +44,7 @@ class DetailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("in detailed view")
+        
         
         //initializeLabels()
         
@@ -57,18 +57,20 @@ class DetailedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateLabels()
+    }
+    
     func updateLabels() {
         
-        if weatherData.apparentTemperature != nil { //weather object does not have valid data
+        if weatherData.initialized == true { //weather object does not have valid data
             apparentTempLabel.text = String(format:"%.0f", weatherData.apparentTemperature) + "°"
+            highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
+            lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
+            weatherDetailText.text = weatherData.dailySummary
         } else {
             apparentTempLabel.text = ""
         }
-        
-        highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
-        lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
-        weatherDetailText.text = weatherData.dailySummary
-        
     }
 
     override func didReceiveMemoryWarning() {

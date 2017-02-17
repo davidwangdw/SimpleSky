@@ -10,6 +10,11 @@ import UIKit
 
 class TutorialPageViewController: UIPageViewController {
     
+    //hide status bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     weak var tutorialDelegate: TutorialPageViewControllerDelegate?
     
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
