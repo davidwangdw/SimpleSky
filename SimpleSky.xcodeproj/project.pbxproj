@@ -18,7 +18,8 @@
 		216F23A61E569EB2007CD1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216F23A31E569EB2007CD1B5 /* Main.storyboard */; };
 		216F23A81E569EFA007CD1B5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23A71E569EFA007CD1B5 /* Weather.swift */; };
 		216F23AA1E569F09007CD1B5 /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23A91E569F09007CD1B5 /* WeatherGetter.swift */; };
-		216F23CD1E57A384007CD1B5 /* SunriseSunsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23CC1E57A384007CD1B5 /* SunriseSunsetViewController.swift */; };
+		216F23D21E57A45B007CD1B5 /* SunriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23D01E57A3F2007CD1B5 /* SunriseViewController.swift */; };
+		216F23D31E57B038007CD1B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0028BBA01C1B0B980040AE31 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,7 @@
 		216F23A41E569EB2007CD1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SimpleSky/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		216F23A71E569EFA007CD1B5 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = SimpleSky/Weather.swift; sourceTree = SOURCE_ROOT; };
 		216F23A91E569F09007CD1B5 /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherGetter.swift; path = SimpleSky/WeatherGetter.swift; sourceTree = SOURCE_ROOT; };
-		216F23CC1E57A384007CD1B5 /* SunriseSunsetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SunriseSunsetViewController.swift; path = ../../SunriseSunsetViewController.swift; sourceTree = "<group>"; };
+		216F23D01E57A3F2007CD1B5 /* SunriseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SunriseViewController.swift; path = SimpleSky/SunriseViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		0028BB941C1B0B980040AE31 /* SimpleSky */ = {
 			isa = PBXGroup;
 			children = (
+				216F23D01E57A3F2007CD1B5 /* SunriseViewController.swift */,
 				0028BB951C1B0B980040AE31 /* AppDelegate.swift */,
 				0028BBA01C1B0B980040AE31 /* Assets.xcassets */,
 				216F23821E569C5D007CD1B5 /* CurrentViewController.swift */,
@@ -113,7 +115,6 @@
 				0028BBA51C1B0B980040AE31 /* Info.plist */,
 				216F23A11E569EB2007CD1B5 /* LaunchScreen.storyboard */,
 				216F23A31E569EB2007CD1B5 /* Main.storyboard */,
-				216F23CC1E57A384007CD1B5 /* SunriseSunsetViewController.swift */,
 				0028BBC71C1B11A70040AE31 /* TutorialPageViewController.swift */,
 				00D7B5221C62457A0024DAE5 /* TutorialViewController.swift */,
 				216F23A71E569EFA007CD1B5 /* Weather.swift */,
@@ -234,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				216F23A51E569EB2007CD1B5 /* LaunchScreen.storyboard in Resources */,
+				216F23D31E57B038007CD1B5 /* Assets.xcassets in Resources */,
 				216F23A61E569EB2007CD1B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216F23D21E57A45B007CD1B5 /* SunriseViewController.swift in Sources */,
 				216F23A81E569EFA007CD1B5 /* Weather.swift in Sources */,
 				216F239A1E569E14007CD1B5 /* AppDelegate.swift in Sources */,
 				216F239B1E569E14007CD1B5 /* CurrentViewController.swift in Sources */,
@@ -267,7 +270,6 @@
 				216F239E1E569E14007CD1B5 /* DailyViewController.swift in Sources */,
 				216F239F1E569E14007CD1B5 /* TutorialViewController.swift in Sources */,
 				216F23AA1E569F09007CD1B5 /* WeatherGetter.swift in Sources */,
-				216F23CD1E57A384007CD1B5 /* SunriseSunsetViewController.swift in Sources */,
 				216F23A01E569E14007CD1B5 /* TutorialPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +416,7 @@
 				DEVELOPMENT_TEAM = 98YT4HPVK9;
 				INFOPLIST_FILE = SimpleSky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang.SimpleSky;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang.SimpleWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -427,8 +429,9 @@
 				DEVELOPMENT_TEAM = 98YT4HPVK9;
 				INFOPLIST_FILE = SimpleSky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang.SimpleSky;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DavidWang.SimpleWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

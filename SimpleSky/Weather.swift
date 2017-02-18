@@ -72,8 +72,8 @@ struct Weather {
      */
     
     //specific daily data
-    //var sunriseTime:NSDate
-    //var sunsetTime: NSDate
+    var sunriseTime: String
+    var sunsetTime: String
     //var temperatureMinTime: NSDate
     
     
@@ -147,7 +147,6 @@ struct Weather {
         for i in 0 ... 23 {
             var weatherDictHourlyDataDetails = weatherDictHourlyDataDetails[i]
             let date = NSDate(timeIntervalSince1970: weatherDictHourlyDataDetails["time"] as! TimeInterval)
-            //hourlyTimeArray.append(weatherDictHourlyDataDetails["time"] as! NSDate)
             let hour = calendar.component(.hour, from: date as Date)
             hourlyTimeArray.append(hour)
             hourlySummaryArray.append(weatherDictHourlyDataDetails["summary"] as! String)
@@ -164,6 +163,8 @@ struct Weather {
         
         temperatureMin = 0.0
         temperatureMax = 0.0
+        sunriseTime = ""
+        sunsetTime = ""
         
         for i in 0 ... 7 {
             var weatherDictDailyDataDetails = weatherDictDailyDataDetails[i]
@@ -172,6 +173,19 @@ struct Weather {
             if i == 0 { //first day, i.e. today
                 temperatureMin = weatherDictDailyDataDetails["temperatureMin"] as! Double
                 temperatureMax = weatherDictDailyDataDetails["temperatureMax"] as! Double
+                
+                //for sunrise and sunset
+                
+                let date = NSDate(timeIntervalSince1970: weatherDictDailyDataDetails["sunriseTime"] as! TimeInterval)
+                let sunriseTimeHour = calendar.component(.hour, from: date as Date)
+                let sunriseTimeMinute = calendar.component(.minute, from: date as Date)
+                
+                let date2 = NSDate(timeIntervalSince1970: weatherDictDailyDataDetails["sunsetTime"] as! TimeInterval)
+                let sunsetTimeHour = calendar.component(.hour, from: date2 as Date)
+                let sunsetTimeMinute = calendar.component(.minute, from: date2 as Date)
+                
+                sunriseTime = String(sunriseTimeHour) + ":" + String(sunriseTimeMinute)
+                sunsetTime = String(sunsetTimeHour) + ":" + String(sunsetTimeMinute)
             }
             //add switch statement later
             if day == 1 {
@@ -196,12 +210,6 @@ struct Weather {
             dailyTempHigh.append(weatherDictDailyDataDetails["temperatureMax"] as! Double)
             dailyTempLow.append(weatherDictDailyDataDetails["temperatureMin"] as! Double)
         }
-        
-        //print(weatherDictDailyDataDetails1["temperatureMin"])
-        //print(weatherDictDailyDataDetails[0])
-        //print(weatherDictDailyData)
-        
-        //}
         
         //temperatureMin = weatherDictDailyData["temperatureMin"] as! Double
         //temperatureMin = weatherDictDailyData["temperatureMin"] as! Double
@@ -232,41 +240,6 @@ struct Weather {
          humidity = weatherDictCurrently["summary"] as! Double
          windSpeed = weatherDictCurrently["summary"] as! Double
          windBearing = weatherDictCurrently["summary"] as! Double*/
-        
-        /*var weatherDictMinutely = weatherData["minutely"]![0] as! [String: AnyObject]
-         
-         dateAndTime = NSDate(timeIntervalSince1970: weatherDictMinutely["time"] as! TimeInterval)
-         
-         summary = weatherDictMinutely["summary"] as! String
-         icon = weatherDictMinutely["summary"] as! String
-         precipProbability = weatherDictMinutely["summary"] as! Double
-         precipType = weatherDictMinutely["summary"] as! String
-         temperature = weatherDictMinutely["summary"] as! Double
-         apparentTemperature = weatherDictMinutely["summary"] as! Double
-         humidity = weatherDictMinutely["summary"] as! Double
-         windSpeed = weatherDictMinutely["summary"] as! Double
-         windBearing = weatherDictMinutely["summary"] as! Double
-         
-         var weatherDictHourly = weatherData["hourly"]![0] as! [String: AnyObject]
-         
-         dateAndTime = NSDate(timeIntervalSince1970: weatherDictHourly["time"] as! TimeInterval)
-         
-         summary = weatherDictHourly["summary"] as! String
-         icon = weatherDictHourly["summary"] as! String
-         precipProbability = weatherDictHourly["summary"] as! Double
-         precipType = weatherDictHourly["summary"] as! String
-         temperature = weatherDictHourly["summary"] as! Double
-         apparentTemperature = weatherDictHourly["summary"] as! Double
-         humidity = weatherDictHourly["summary"] as! Double
-         windSpeed = weatherDictHourly["summary"] as! Double
-         windBearing = weatherDictHourly["summary"] as! Double
-         
-         var weatherDictDaily = weatherData["daily"]![0] as! [String: AnyObject]
-         
-         dateAndTime = NSDate(timeIntervalSince1970: weatherDictDaily["time"] as! TimeInterval)
-         
-         summary = weatherDictHourly["summary"] as! String
-         icon = weatherDictHourly["summary"] as! String*/
     }
     
     init(weatherData: String) {
@@ -322,6 +295,9 @@ struct Weather {
         dailyIconArray = []
         dailyTempHigh = []
         dailyTempLow = []
+        
+        sunriseTime = ""
+        sunsetTime = ""
     }
     
 }

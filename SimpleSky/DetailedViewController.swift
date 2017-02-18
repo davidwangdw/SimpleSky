@@ -31,6 +31,12 @@ class DetailedViewController: UIViewController {
     
     @IBOutlet weak var dailyWeatherView: UIView!
     
+    @IBOutlet weak var sunriseTimeLabel: UILabel!
+    @IBOutlet weak var sunsetTimeLabel: UILabel!
+    
+    @IBOutlet weak var sunriseTimeUnderlayImage: UIImageView!
+    @IBOutlet weak var sunriseTimeOverlayImage: UIImageView!
+    
     @IBAction func websiteLinkButton(_ sender: Any) {
         UIApplication.shared.openURL(URL(string: "http://www.davidwangdw.com")!)
         
@@ -44,9 +50,7 @@ class DetailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        //initializeLabels()
+        initializeLabels()
         
         //hiddenLabel.textColor = UIColor.white
         
@@ -65,11 +69,15 @@ class DetailedViewController: UIViewController {
         
         if weatherData.initialized == true { //weather object does not have valid data
             apparentTempLabel.text = String(format:"%.0f", weatherData.apparentTemperature) + "°"
+            temperatureLabel.text = String(format:"%.0f", weatherData.temperature!) + "°"
             highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
             lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
+            precipitationLabel.text = String(format:"%.0f", weatherData.precipProbability * 100) + "%"
             weatherDetailText.text = weatherData.dailySummary
+            sunriseTimeLabel.text = weatherData.sunriseTime
+            sunsetTimeLabel.text = weatherData.sunsetTime
         } else {
-            apparentTempLabel.text = ""
+            initializeLabels()
         }
     }
 
@@ -78,24 +86,19 @@ class DetailedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func initializeLabels() {
+        
+        apparentTempLabel.text = ""
+        lowTempLabel.text = ""
+        highTempLabel.text = ""
+        precipitationLabel.text = ""
+        temperatureLabel.text = ""
+        sunriseTimeLabel.text = ""
+        sunsetTimeLabel.text = ""
+    }
     
     /*override func viewDidAppear(_ animated: Bool) {
      //print("view appeared!")
-     
-     //updateLabels()
-     }*/
-    
-    /*func initializeLabels() {
-     
-     apparentTempLabel.text = ""
-     weatherDetailText.text = ""
-     lowTempLabel.text = ""
-     highTempLabel.text = ""
-     precipitationLabel.text = ""
-     temperatureLabel.text = ""
-     
-     }
      
      func colorLabels() {
      apparentTempLabel.textColor = hiddenLabel.textColor

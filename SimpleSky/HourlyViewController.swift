@@ -12,8 +12,6 @@ class HourlyWeatherCell: UITableViewCell {
     @IBOutlet weak var hourlyWeatherSummaryImage: UIImageView!
     @IBOutlet weak var hourlyWeatherTempLabel: UILabel!
     @IBOutlet weak var hourlyWeatherHourLabel: UILabel!
-    
-    
 }
 
 class HourlyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -58,6 +56,7 @@ class HourlyViewController: UIViewController, UITableViewDataSource, UITableView
         if weatherData.temperature == nil {
             cell.hourlyWeatherHourLabel.text = ""
             cell.hourlyWeatherSummaryLabel.text = ""
+            cell.hourlyWeatherTempLabel.text = ""
             return cell
         } else {
             cell.hourlyWeatherHourLabel.text = String(weatherData.hourlyTimeArray[indexPath.row]) + ":00"
