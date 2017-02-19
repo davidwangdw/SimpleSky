@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 var weatherData = Weather(weatherData: "")
 //terrible way to implement check - change later
 var initialized: Int = 0
 
-class CurrentViewController: UIViewController, WeatherGetterDelegate {
+class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var logoView: UIImageView!
@@ -30,13 +31,28 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate {
     
     var animated: Bool = false
     
+    var locationManager: CLLocationManager = CLLocationManager()
+    var startLocation: CLLocation!
+    
+    var latitudeFromCurrentLocation: Double = 0.0
+    var longitudeFromCurrentLocation: Double = 0.0
+    
     @IBAction func updateWeather(_ sender: Any) {
+        
+        startLocation = nil
         
         var weather: WeatherGetter!
         
         weather = WeatherGetter(delegate: self)
         
-        weather.getWeather(coordinates: "40.781693,-73.966590")
+        //print(String(format:"%.6f", latitudeFromCurrentLocation) + "," + String(format: "%.6f", longitudeFromCurrentLocation))
+        
+        let coordinates = String(format:"%.6f", latitudeFromCurrentLocation) + "," + String(format: "%.6f", longitudeFromCurrentLocation)
+        
+        weather.getWeather(coordinates: coordinates)
+        //weather.getWeather(coordinates: "40.781693,-73.966590")
+        
+        print("in udpateWeather")
         
         initialized = 1
         
@@ -54,6 +70,12 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate {
         } else {
             //updateLabels()
         }
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        startLocation = nil
         
         degreeLabel.center.x -= view.bounds.width
         degreeLabel.text = ""
@@ -118,6 +140,72 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate {
         highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
         lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
     }
+
+    /*func startLocationManager() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+            locationManager.startUpdatingLocation()
+            updatingLocation = true
+            
+        }
+    }
+    
+    @IBAction func getLocation() {
+        let authStatus = CLLocationManager.authorizationStatus()
+        
+        if authStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        }
+        
+        if authStatus == .denied || authStatus == .restricted {
+            //showLocationServicesDeniedAlert()
+            return
+        }
+        
+        if updatingLocation {
+            //stopLocationManager()
+        } else {
+            location = nil
+            lastLocationError = nil
+            placemark = nil
+            lastGeocodingError = nil
+            startLocationManager()
+        }
+        
+        //updateWeather()
+        updateLabels()
+    }*/
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation])
+    {
+        let latestLocation: CLLocation = locations[locations.count - 1]
+        
+        //latitude.text = String(format: "%.4f", latestLocation.coordinate.latitude)
+        //longitude.text = String(format: "%.4f", latestLocation.coordinate.longitude)
+        //horizontalAccuracy.text = String(format: "%.4f", latestLocation.horizontalAccuracy)
+        //altitude.text = String(format: "%.4f", latestLocation.altitude)
+        //verticalAccuracy.text = String(format: "%.4f", latestLocation.verticalAccuracy)
+        
+        latitudeFromCurrentLocation = latestLocation.coordinate.latitude
+        longitudeFromCurrentLocation = latestLocation.coordinate.longitude
+        
+        if startLocation == nil {
+            startLocation = latestLocation
+        }
+        
+        //let distanceBetween: CLLocationDistance = latestLocation.distance(from: startLocation)
+        
+        //distance.text = String(format: "%.2f", distanceBetween)
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didFailWithError error: Error) {
+        
+    }
+
     
     func didGetWeather(weather: Weather) {
         DispatchQueue.main.async {
