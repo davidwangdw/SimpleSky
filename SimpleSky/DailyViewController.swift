@@ -55,16 +55,23 @@ class DailyViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         if weatherData.temperature == nil {
             cell.dailyWeatherSummaryLabel.text = ""
-            
             cell.dailyWeatherDayLabel.text = ""
             cell.dailyWeatherHighTempLabel.text = ""
             cell.dailyWeatherLowTempLabel.text = ""
+            cell.dailyWeatherLowTempImage.isHidden = true
+            cell.dailyWeatherHighTempImage.isHidden = true
+            cell.dailyWeatherVerticalSeparator.isHidden = true
+            cell.dailyWeatherSummaryImage.isHidden = true
             
             return cell
         } else {
             cell.dailyWeatherSummaryLabel.text = weatherData.dailySummaryArray[indexPath.row]
             cell.dailyWeatherLowTempLabel.text = String(format: "%.0f", weatherData.dailyTempLow[indexPath.row]) + "°"
             cell.dailyWeatherHighTempLabel.text = String(format: "%.0f", weatherData.dailyTempHigh[indexPath.row]) + "°"
+            cell.dailyWeatherLowTempImage.isHidden = false
+            cell.dailyWeatherHighTempImage.isHidden = false
+            cell.dailyWeatherVerticalSeparator.isHidden = false
+            cell.dailyWeatherSummaryImage.isHidden = false
             //cell.fruitImageView?.image = UIImage(named: fruitName)
             /*
              cell.dailyWeatherHighTempImage: UIImage!

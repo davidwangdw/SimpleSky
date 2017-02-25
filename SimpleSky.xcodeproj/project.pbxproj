@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		215B5DCF1E61427800BB5087 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215B5DCE1E61427800BB5087 /* SettingsViewController.swift */; };
 		216F239A1E569E14007CD1B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028BB951C1B0B980040AE31 /* AppDelegate.swift */; };
 		216F239B1E569E14007CD1B5 /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23821E569C5D007CD1B5 /* CurrentViewController.swift */; };
 		216F239C1E569E14007CD1B5 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F23841E569C6E007CD1B5 /* DetailedViewController.swift */; };
@@ -48,6 +49,7 @@
 		0028BBB51C1B0B980040AE31 /* SimpleSkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0028BBC71C1B11A70040AE31 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialPageViewController.swift; path = SimpleSky/TutorialPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		00D7B5221C62457A0024DAE5 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = SimpleSky/TutorialViewController.swift; sourceTree = SOURCE_ROOT; };
+		215B5DCE1E61427800BB5087 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../CanIPark/CanIPark/SettingsViewController.swift; sourceTree = "<group>"; };
 		216F23821E569C5D007CD1B5 /* CurrentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentViewController.swift; path = SimpleSky/CurrentViewController.swift; sourceTree = SOURCE_ROOT; };
 		216F23841E569C6E007CD1B5 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedViewController.swift; path = SimpleSky/DetailedViewController.swift; sourceTree = SOURCE_ROOT; };
 		216F23861E569C78007CD1B5 /* HourlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HourlyViewController.swift; path = SimpleSky/HourlyViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -115,6 +117,7 @@
 				0028BBA51C1B0B980040AE31 /* Info.plist */,
 				216F23A11E569EB2007CD1B5 /* LaunchScreen.storyboard */,
 				216F23A31E569EB2007CD1B5 /* Main.storyboard */,
+				215B5DCE1E61427800BB5087 /* SettingsViewController.swift */,
 				0028BBC71C1B11A70040AE31 /* TutorialPageViewController.swift */,
 				00D7B5221C62457A0024DAE5 /* TutorialViewController.swift */,
 				216F23A71E569EFA007CD1B5 /* Weather.swift */,
@@ -263,6 +266,7 @@
 			files = (
 				216F23D21E57A45B007CD1B5 /* SunriseViewController.swift in Sources */,
 				216F23A81E569EFA007CD1B5 /* Weather.swift in Sources */,
+				215B5DCF1E61427800BB5087 /* SettingsViewController.swift in Sources */,
 				216F239A1E569E14007CD1B5 /* AppDelegate.swift in Sources */,
 				216F239B1E569E14007CD1B5 /* CurrentViewController.swift in Sources */,
 				216F239C1E569E14007CD1B5 /* DetailedViewController.swift in Sources */,

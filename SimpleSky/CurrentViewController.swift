@@ -37,6 +37,11 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
     var latitudeFromCurrentLocation: Double = 0.0
     var longitudeFromCurrentLocation: Double = 0.0
     
+    //images
+    @IBOutlet weak var currentWeatherSummaryImage: UIImageView!
+    @IBOutlet weak var currentWeatherHighTemp: UIImageView!
+    @IBOutlet weak var currentWeatherLowTemp: UIImageView!
+    
     @IBAction func updateWeather(_ sender: Any) {
         
         startLocation = nil
@@ -83,6 +88,10 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         highTempLabel.center.y -= view.bounds.height
         lowTempLabel.center.y -= view.bounds.height
         errorLabel.center.y += view.bounds.height
+        
+        currentWeatherSummaryImage.isHidden = true
+        currentWeatherHighTemp.isHidden = true
+        currentWeatherLowTemp.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -99,23 +108,40 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         if animated == true {
             return
         }
-        UIView.animate(withDuration: 4, delay: 0.4, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
+        
+        UIView.animate(withDuration: 4, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
             self.getStartedLabel.center.y += self.view.bounds.height }, completion: nil)
         
-        UIView.animate(withDuration: 1.5, delay: 0.4, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
             self.degreeLabel.center.x += self.view.bounds.width }, completion: nil)
         
-        UIView.animate(withDuration: 1.5, delay: 0.4, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
             self.summaryLabel.center.y += self.view.bounds.height }, completion: nil)
         
-        UIView.animate(withDuration: 1.5, delay: 0.4, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
             self.lowTempLabel.center.y += self.view.bounds.height }, completion: nil)
         
-        UIView.animate(withDuration: 1.5, delay: 0.4, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
             self.highTempLabel.center.y += self.view.bounds.height }, completion: nil)
         
         
+        currentWeatherSummaryImage.isHidden = false
+        currentWeatherLowTemp.isHidden = false
+        currentWeatherHighTemp.isHidden = false
+        
+        let imageFade = CABasicAnimation(keyPath: "opacity")
+            //imageFade.beginTime = CACurrentMediaTime() + 0.4
+        imageFade.isRemovedOnCompletion = false
+        imageFade.fromValue = 0
+        imageFade.duration = 2.5
+        imageFade.toValue = 1
+        currentWeatherSummaryImage.layer.add(imageFade, forKey: "imageFade")
+        currentWeatherHighTemp.layer.add(imageFade, forKey: "imageFade")
+        currentWeatherLowTemp.layer.add(imageFade, forKey: "imageFade")
+        cityLabel.layer.add(imageFade, forKey: "imageFade")
+
         animated = true
+
     }
 
     func initializeLabels() {
@@ -139,6 +165,7 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         summaryLabel.text = weatherData.summary
         highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
         lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
+        cityLabel.text = weatherData.timezone
     }
 
     /*func startLocationManager() {

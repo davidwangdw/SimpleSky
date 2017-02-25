@@ -57,11 +57,13 @@ class HourlyViewController: UIViewController, UITableViewDataSource, UITableView
             cell.hourlyWeatherHourLabel.text = ""
             cell.hourlyWeatherSummaryLabel.text = ""
             cell.hourlyWeatherTempLabel.text = ""
+            cell.hourlyWeatherSummaryImage.isHidden = true
             return cell
         } else {
             cell.hourlyWeatherHourLabel.text = String(weatherData.hourlyTimeArray[indexPath.row]) + ":00"
             cell.hourlyWeatherSummaryLabel.text = weatherData.hourlySummaryArray[indexPath.row]
             cell.hourlyWeatherTempLabel.text = String(format: "%.0f", weatherData.hourlyTemperatureArray[indexPath.row]) + "°"
+            cell.hourlyWeatherSummaryImage.isHidden = false
             //cell.fruitImageView?.image = UIImage(named: fruitName)
             return cell
         }

@@ -76,6 +76,21 @@ class DetailedViewController: UIViewController {
             weatherDetailText.text = weatherData.dailySummary
             sunriseTimeLabel.text = weatherData.sunriseTime
             sunsetTimeLabel.text = weatherData.sunsetTime
+            
+            let imageFade = CABasicAnimation(keyPath: "opacity")
+            //imageFade.beginTime = CACurrentMediaTime() + 0.4
+            imageFade.isRemovedOnCompletion = false
+            imageFade.fromValue = 0
+            imageFade.duration = 2.5
+            imageFade.toValue = 1
+            apparentTempLabel.layer.add(imageFade, forKey: "imageFade")
+            lowTempLabel.layer.add(imageFade, forKey: "imageFade")
+            highTempLabel.layer.add(imageFade, forKey: "imageFade")
+            precipitationLabel.layer.add(imageFade, forKey: "imageFade")
+            temperatureLabel.layer.add(imageFade, forKey: "imageFade")
+            sunriseTimeLabel.layer.add(imageFade, forKey: "imageFade")
+            sunsetTimeLabel.layer.add(imageFade, forKey: "imageFade")
+            weatherDetailText.layer.add(imageFade, forKey: "imageFade")
         } else {
             initializeLabels()
         }
@@ -95,6 +110,11 @@ class DetailedViewController: UIViewController {
         temperatureLabel.text = ""
         sunriseTimeLabel.text = ""
         sunsetTimeLabel.text = ""
+    }
+    
+    func fadeInLabels() {
+        
+        
     }
     
     /*override func viewDidAppear(_ animated: Bool) {

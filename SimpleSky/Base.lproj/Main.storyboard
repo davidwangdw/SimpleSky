@@ -126,10 +126,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OverallSummaryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gmV-23-hMe">
-                                <rect key="frame" x="30" y="337" width="38" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press &quot;Get Weather&quot; to get started!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ww0-bm-Orb">
                                 <rect key="frame" x="16" y="424" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -151,11 +147,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="gmV-23-hMe">
+                                <rect key="frame" x="6" y="325" width="61" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="Miu-mY-by7" id="Sai-OU-c1E"/>
+                        <outlet property="currentWeatherHighTemp" destination="qUh-CK-3jk" id="Jyh-Sc-Ixp"/>
+                        <outlet property="currentWeatherLowTemp" destination="wNb-1w-hKR" id="PIO-QE-QhI"/>
+                        <outlet property="currentWeatherSummaryImage" destination="gmV-23-hMe" id="YYj-VE-f4J"/>
                         <outlet property="degreeLabel" destination="5zT-0j-WrL" id="EHd-ZR-mNo"/>
                         <outlet property="errorLabel" destination="bUI-1e-79O" id="iwd-Z5-RDW"/>
                         <outlet property="getStartedLabel" destination="ww0-bm-Orb" id="SaP-CL-vpE"/>
@@ -492,7 +495,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OverallSummaryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="j60-Sl-EFq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="j60-Sl-EFq">
                                                     <rect key="frame" x="78" y="0.0" width="42" height="66"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -578,10 +581,6 @@
                                                     <rect key="frame" x="61" y="48" width="11" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TableDivider" translatesAutoresizingMaskIntoConstraints="NO" id="1sz-Sc-ILJ">
-                                                    <rect key="frame" x="111" y="0.0" width="11" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Partly cloudy with a chance of meatballs. Partly cloudy with a chance of meatballs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3t-E4-32S">
                                                     <rect key="frame" x="122" y="0.0" width="152" height="81"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -589,8 +588,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OverallSummaryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wto-Im-LsC">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wto-Im-LsC">
                                                     <rect key="frame" x="274" y="0.0" width="44" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TableDivider" translatesAutoresizingMaskIntoConstraints="NO" id="1sz-Sc-ILJ">
+                                                    <rect key="frame" x="115" y="4" width="3" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -628,7 +631,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="OverallSummaryIcon" width="300" height="354"/>
+        <image name="2" width="300" height="354"/>
         <image name="TableDivider" width="12" height="70"/>
         <image name="TempHi" width="22" height="37"/>
         <image name="TempLow" width="22" height="37"/>
