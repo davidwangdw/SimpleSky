@@ -104,6 +104,11 @@ struct Weather {
         //overall table is weatherData["key"]
         
         timezone = weatherData["timezone"] as! String
+        let timezoneSeparatedArray = timezone.characters.split { $0 == "/"}
+        //print(timezoneSeparatedArray.map(String.init))
+        let cityStringDraft = String(timezoneSeparatedArray.map(String.init)[1])!
+        let cityStringFinal = cityStringDraft.replacingOccurrences(of: "_", with: " ")
+        timezone = cityStringFinal
         
         //separate timezone into city and country later
         /*city = "city"

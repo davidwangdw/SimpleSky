@@ -354,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="18.75" y="600"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="wtA-Yl-b77">
             <objects>
-                <viewController id="kjW-Oc-eQb" sceneMemberID="viewController">
+                <viewController id="kjW-Oc-eQb" customClass="SettingsViewController" customModule="SimpleSky" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dOw-vB-RCQ"/>
                         <viewControllerLayoutGuide type="bottom" id="HgF-Vt-Ivm"/>
@@ -370,14 +370,24 @@
                                 <rect key="frame" x="263" y="28" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="Ode-EK-Q07" eventType="touchUpInside" id="nHe-jc-NXs"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Functionality coming soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOx-Vu-OPd">
+                                <rect key="frame" x="16" y="84" width="284" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ode-EK-Q07" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-724" y="1363"/>
+            <point key="canvasLocation" x="-725.625" y="1362.6760563380283"/>
         </scene>
         <!--Sunrise View Controller-->
         <scene sceneID="fvz-eR-U1q">
