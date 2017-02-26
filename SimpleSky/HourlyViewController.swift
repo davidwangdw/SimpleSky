@@ -64,6 +64,14 @@ class HourlyViewController: UIViewController, UITableViewDataSource, UITableView
             cell.hourlyWeatherSummaryLabel.text = weatherData.hourlySummaryArray[indexPath.row]
             cell.hourlyWeatherTempLabel.text = String(format: "%.0f", weatherData.hourlyTemperatureArray[indexPath.row]) + "°"
             cell.hourlyWeatherSummaryImage.isHidden = false
+            
+            let weatherIconArray = ["clear-day", "clear-night", "rain", "snow", "sleet", "wind", "fog", "cloudy", "partly-cloudy-day", "partly-cloudy-night"]
+            
+            if weatherIconArray.contains(weatherData.hourlyIconArray[indexPath.row]) {
+                cell.hourlyWeatherSummaryImage.image = UIImage(named: weatherData.hourlyIconArray[indexPath.row])
+            } else {
+                cell.hourlyWeatherSummaryImage.image = UIImage(named: "clear-day")
+            }
             //cell.fruitImageView?.image = UIImage(named: fruitName)
             return cell
         }

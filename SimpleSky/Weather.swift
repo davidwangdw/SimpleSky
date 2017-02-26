@@ -51,6 +51,7 @@ struct Weather {
     var hourlySummaryArray = [String]()
     var hourlyIconArray = [String]()
     var hourlyTemperatureArray = [Double]()
+    //var hourlyIconArray = [String]()
     
     //daily info
     
@@ -59,6 +60,7 @@ struct Weather {
     var dailyIconArray = [String]()
     var dailyTempHigh = [Double]()
     var dailyTempLow = [Double]()
+    //var dailyIconArray = [String]()
     
     /*var longitude: Double
      var latitude: Double
@@ -157,6 +159,7 @@ struct Weather {
             hourlySummaryArray.append(weatherDictHourlyDataDetails["summary"] as! String)
             hourlyIconArray.append(weatherDictHourlyDataDetails["icon"] as! String)
             hourlyTemperatureArray.append(weatherDictHourlyDataDetails["temperature"] as! Double)
+            
         }
         
         //daily info

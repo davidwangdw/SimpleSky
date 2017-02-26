@@ -68,13 +68,7 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         
         //colorLabels()
         
-        //terrible way to implement viewdidload = change later
-        if initialized == 0 {
-            //initializeLabels()
-            
-        } else {
-            //updateLabels()
-        }
+        initializeLabels()
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
@@ -145,10 +139,7 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
     }
 
     func initializeLabels() {
-        highTempLabel.text = ""
-        lowTempLabel.text = ""
-        degreeLabel.text = ""
-        summaryLabel.text = ""
+        cityLabel.text = ""
     }
     
     func colorLabels() {
@@ -166,6 +157,16 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
         lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
         cityLabel.text = weatherData.timezone
+        print(weatherData.icon)
+        
+        let weatherIconArray = ["clear-day", "clear-night", "rain", "snow", "sleet", "wind", "fog", "cloudy", "partly-cloudy-day", "partly-cloudy-night"]
+        
+        if weatherIconArray.contains(weatherData.icon) {
+            currentWeatherSummaryImage.image = UIImage(named: weatherData.icon)
+        } else {
+            currentWeatherSummaryImage.image = UIImage(named: "clear-day")
+        }
+        
     }
 
     /*func startLocationManager() {

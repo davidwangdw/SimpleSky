@@ -72,13 +72,15 @@ class DailyViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.dailyWeatherHighTempImage.isHidden = false
             cell.dailyWeatherVerticalSeparator.isHidden = false
             cell.dailyWeatherSummaryImage.isHidden = false
-            //cell.fruitImageView?.image = UIImage(named: fruitName)
-            /*
-             cell.dailyWeatherHighTempImage: UIImage!
-             cell.dailyWeatherLowTempImage: UIImage!
- 
-             cell.dailyWeatherSummaryImage: UIImage!
-             cell.dailyWeatherVerticalSeparator: UIImage!*/
+            
+            let weatherIconArray = ["clear-day", "clear-night", "rain", "snow", "sleet", "wind", "fog", "cloudy", "partly-cloudy-day", "partly-cloudy-night"]
+            
+            if weatherIconArray.contains(weatherData.dailyIconArray[indexPath.row]) {
+                cell.dailyWeatherSummaryImage.image = UIImage(named: weatherData.dailyIconArray[indexPath.row])
+            } else {
+                cell.dailyWeatherSummaryImage.image = UIImage(named: "clear-day")
+            }
+
             cell.dailyWeatherDayLabel.text = weatherData.dailyTimeArray[indexPath.row]
             return cell
         }
