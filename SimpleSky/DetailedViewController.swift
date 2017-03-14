@@ -73,9 +73,9 @@ class DetailedViewController: UIViewController {
     
     func updateLabels() {
         
-        if animated == true {
+        /*if animated == true {
             return
-        }
+        }*/
         
         if weatherData.initialized == true { //weather object does not have valid data
             
@@ -100,7 +100,7 @@ class DetailedViewController: UIViewController {
             //imageFade.beginTime = CACurrentMediaTime() + 0.4
             imageFade.isRemovedOnCompletion = false
             imageFade.fromValue = 0
-            imageFade.duration = 2.5
+            imageFade.duration = 1.2
             imageFade.toValue = 1
             apparentTempLabel.layer.add(imageFade, forKey: "imageFade")
             lowTempLabel.layer.add(imageFade, forKey: "imageFade")

@@ -30,6 +30,7 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
     @IBOutlet weak var errorLabel: UILabel!
     
     var animated: Bool = false
+    var errorOccured: Bool = false
     
     var locationManager: CLLocationManager = CLLocationManager()
     var startLocation: CLLocation!
@@ -86,6 +87,9 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         currentWeatherSummaryImage.isHidden = true
         currentWeatherHighTemp.isHidden = true
         currentWeatherLowTemp.isHidden = true
+        
+        currentWeatherLowTemp.tintColor = UIColor.white
+        currentWeatherSummaryImage.tintColor = UIColor.white
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -133,6 +137,7 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         currentWeatherHighTemp.layer.add(imageFade, forKey: "imageFade")
         currentWeatherLowTemp.layer.add(imageFade, forKey: "imageFade")
         cityLabel.layer.add(imageFade, forKey: "imageFade")
+    
 
         animated = true
 
@@ -153,6 +158,9 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
     func updateLabels() {
         //"°"
         degreeLabel.text = String(format:"%.0f", weatherData.temperature!) + "°"
+        degreeLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        degreeLabel.layer.shadowOpacity = 1
+        degreeLabel.layer.shadowRadius = 6
         summaryLabel.text = weatherData.summary
         highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
         lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
@@ -257,8 +265,12 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
         DispatchQueue.main.async {
             //self.showSimpleAlert(title: "Can't get the weather",
             //message: "The weather service isn't responding.")
+            
+            //add a check to get rid of error message if service works again
             UIView.animate(withDuration: 1.5, delay: 0.4, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
                 self.errorLabel.center.y -= self.view.bounds.height }, completion: nil)
+            
+            self.errorOccured = true
         }
         print("didNotGetWeather error: \(error)")
     }

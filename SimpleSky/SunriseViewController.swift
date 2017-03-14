@@ -16,8 +16,8 @@ class SunriseImageCell: UITableViewCell {
 
 class SunriseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var locations = ["Kalaw, Myanmar", "Washington, DC", "Bar Harbor, Maine"]
-    var sunrisePhotoArray = ["sunrise1", "sunrise2", "sunrise3"]
+    var locations = ["Kalaw, Myanmar", "Bagan, Myanmar", "Kuala Lumpur, Malaysia"]
+    var sunrisePhotoArray = ["kalaw", "bagan", "kualalumpur"]
     
     @IBOutlet weak var sunriseTable: UITableView!
 
