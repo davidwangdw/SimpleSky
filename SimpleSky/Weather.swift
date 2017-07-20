@@ -60,18 +60,6 @@ struct Weather {
     var dailyIconArray = [String]()
     var dailyTempHigh = [Double]()
     var dailyTempLow = [Double]()
-    //var dailyIconArray = [String]()
-    
-    /*var longitude: Double
-     var latitude: Double
-     //var timezone: String
-     
-     var dateAndTime: NSDate
-     
-     //this is specific weather data
-     
-     
-     */
     
     //specific daily data
     var sunriseTime: String
@@ -83,13 +71,7 @@ struct Weather {
     //var humidity: Double
     //var windSpeed: Double
     //var windBearing: Double
-    
-    //var temperatureMaxTime: NSDate
-    //var apparentTemperatureMin: Double
-    //var apparentTemperatureMinTime: NSDate
-    //var apparentTemperatureMax: Double
-    //var apparentTemperatureMaxTime: NSDate
-    
+
     /*var alertTitle: String
      var alertTime: NSDate
      var alertExpire: NSDate

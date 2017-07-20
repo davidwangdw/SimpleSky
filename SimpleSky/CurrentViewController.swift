@@ -158,9 +158,9 @@ class CurrentViewController: UIViewController, WeatherGetterDelegate, CLLocation
     func updateLabels() {
         //"°"
         degreeLabel.text = String(format:"%.0f", weatherData.temperature!) + "°"
-        degreeLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        /*degreeLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
         degreeLabel.layer.shadowOpacity = 1
-        degreeLabel.layer.shadowRadius = 6
+        degreeLabel.layer.shadowRadius = 6*/
         summaryLabel.text = weatherData.summary
         highTempLabel.text = String(format:"%.0f", weatherData.temperatureMax) + "°"
         lowTempLabel.text = String(format:"%.0f", weatherData.temperatureMin) + "°"
